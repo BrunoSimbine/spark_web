@@ -1,4 +1,5 @@
-function init(){
+var btn = document.getElementById('submit-btn');
+btn.onclick = function(){
 
 // Dados a serem enviados no corpo da requisição
 const dataToSend = {
