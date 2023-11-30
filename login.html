@@ -115,8 +115,8 @@
       return response.json();
     })
     .then(data => {
-      document.write('<h1> Ola mundo </h1>');
-      alert(data);
+      alert('Resposta da requisição: ' + JSON.stringify(data));
+      
       // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
     })
     .catch(error => {
