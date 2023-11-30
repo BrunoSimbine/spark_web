@@ -1,5 +1,8 @@
-var btn = document.getElementById('submit-btn');
-btn.onclick = function(){
+document.addEventListener('DOMContentLoaded', function() {
+  // Coloque aqui o código que deseja executar quando a página terminar de carregar
+  alert('A página foi carregada!');
+  // Ou qualquer outra lógica que você queira realizar ao carregar a página
+
 
 // Dados a serem enviados no corpo da requisição
 const dataToSend = {
@@ -32,4 +35,4 @@ fetch('http://23.20.239.207:5000/api/auth/login', requestOptions)
     console.error('Erro:', error);
 });
 
-}
+});
