@@ -21,7 +21,7 @@ function getLoginToken()
           return response.json();
         })
         .then(data => {
-          alert(JSON.stringify(data));
+          alert(data);
           // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
         })
         .catch(error => {
