@@ -8,6 +8,7 @@ function getLoginToken()
     const requestOptions = {
         method: 'POST',
         headers: {
+          'accept: */*',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(dataToSend)
