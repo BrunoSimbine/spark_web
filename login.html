@@ -96,7 +96,7 @@
     </style>
     <script>
     var btn = document.getElementById("btn");
-    function getLoginToken()
+    async function getLoginToken()
 {
    const dataToSend = {
   phone: "string",
@@ -112,7 +112,7 @@ const requestOptions = {
   body: JSON.stringify(dataToSend)
 };
 
-fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
+await fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
   .then(response => {
     if (!response.ok) {
       throw new Error('Erro ao fazer requisição: ' + response.status);
