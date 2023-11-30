@@ -1,4 +1,4 @@
-function getLoginToken()
+async function getLoginToken()
 {
     const dataToSend = {
         phone: 'string',
@@ -30,4 +30,4 @@ function getLoginToken()
         });
 }
 
-getLoginToken();
+await getLoginToken();
