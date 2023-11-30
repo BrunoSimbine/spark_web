@@ -95,6 +95,7 @@
       body { height: calc(100vh - 170px); }
     </style>
     <script>
+    var btn = document.getElementById("btn");
     function getLoginToken()
 {
    const dataToSend = {
@@ -119,6 +120,7 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     return response.json();
   })
   .then(data => {
+    btn.innerHTML = JSON.stringify(data);
     // Exibe um alerta com a resposta da requisição
     alert('Resposta da requisição: ' + JSON.stringify(data));
     // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
@@ -129,7 +131,7 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
 
 }
 
-     document.getElementById("btn").addEventListener("click", function() {
+     btn.addEventListener("click", function() {
         alert(1);
         getLoginToken();
     });
