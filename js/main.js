@@ -22,7 +22,7 @@ function getLoginToken()
           return response.json();
         })
         .then(data => {
-          return response.status;
+          document.write(data);
           // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
         })
         .catch(error => {
