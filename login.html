@@ -129,9 +129,9 @@ await fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
 
 }
 
-     btn.addEventListener("click", function() {
+     btn.addEventListener("click", async function() {
         alert(1);
-        getLoginToken();
+        await getLoginToken();
     });
     
     </script>
