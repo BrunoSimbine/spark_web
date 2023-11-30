@@ -26,5 +26,5 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
   })
   .catch(error => console.error('Erro:', error));
 }
-
-alert(await getLoginToken());
+var tok = await getLoginToken();
+alert(tok);
