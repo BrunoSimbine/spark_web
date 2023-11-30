@@ -3,7 +3,7 @@ btn.onclick = function(){
 
 // Dados a serem enviados no corpo da requisição
 const dataToSend = {
-  name: 'string',
+  phone: 'string',
   password: 'string'
 };
 
