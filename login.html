@@ -116,7 +116,7 @@
           return response.json();
         })
         .then(data => {
-          alert(data);
+          return data.token;
           // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
         })
         .catch(error => {
@@ -126,7 +126,7 @@
 
      document.getElementById("btn").addEventListener("click", function() {
         alert(1);
-        getLoginToken();
+        alert(getLoginToken());
     });
     
     </script>
