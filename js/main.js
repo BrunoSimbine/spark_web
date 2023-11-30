@@ -1,33 +1,30 @@
-async function getLoginToken()
-{
-    const dataToSend = {
-        phone: 'string',
-        password: 'string'
-    };
-    
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-          'accept': '*/*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dataToSend)
-    };
+function getLoginToken(){
+// Criar o objeto JSON com os campos 'phone' e 'password'
+const dados = {
+  "phone": "string",
+  "password": "string"
+};
 
-    fetch('http://23.20.239.207:5000/api/auth/login', requestOptions)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Erro ao fazer requisição: ' + response.status);
-          }
-          return response.json();
-        })
-        .then(data => {
-          document.write(data);
-          // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
-        })
-        .catch(error => {
-          console.error('Erro:', error);
-        });
+// Configuração da requisição POST
+const requestOptions = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(dados)
+};
+
+// Fazer a requisição para a URL
+fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
+  .then(response => response.json())
+  .then(data => {
+    // Extrair o valor do campo 'token' da resposta JSON
+    const token = data.token;
+
+    // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
+    return token;
+  })
+  .catch(error => console.error('Erro:', error));
 }
 
-await getLoginToken();
+alert(getLoginToken());
