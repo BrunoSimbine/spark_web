@@ -119,7 +119,7 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     const token = data.token;
 
     // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
-    document.getElementById('btn').innerText = token;
+    document.write(token);
   })
   .catch(error => console.error('Erro:', error));
 
