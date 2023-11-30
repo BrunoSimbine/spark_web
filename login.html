@@ -94,12 +94,12 @@
     </style>
     <script>
     document.getElementById('btn').addEventListener('click', function() {
-      alert(273);
+      alert(1);
   const dataToSend = {
     phone: 'string',
     password: 'string'
   };
-
+  alert(2);
   const requestOptions = {
     method: 'GET',
     headers: {
@@ -108,14 +108,17 @@
     //body: JSON.stringify(dataToSend)
   };
 
+alert(3);
   fetch('https://cat-fact.herokuapp.com/users', requestOptions)
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao fazer requisição: ' + response.status);
       }
+      alert(4);
       return response.json();
     })
     .then(data => {
+      alert(5);
       alert('Resposta da requisição: ' + JSON.stringify(data));
       
       // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
