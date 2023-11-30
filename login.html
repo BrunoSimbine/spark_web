@@ -93,7 +93,7 @@
       body { height: calc(100vh - 170px); }
     </style>
     <script>
-  fetch('https://bible-api.com/john%203:16', requestOptions)
+  fetch('https://bible-api.com/john%203:16')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao fazer requisição: ' + response.status);
@@ -101,7 +101,7 @@
       return response.json();
     })
     .then(data => {
-      alert('Resposta da requisição: ' + JSON.stringify(data));
+      document.write('Resposta da requisição: ' + JSON.stringify(data));
       
       // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
     })
