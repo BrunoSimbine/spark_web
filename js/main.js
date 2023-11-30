@@ -30,4 +30,4 @@ function getLoginToken()
         });
 }
 
-alert(getLoginToken());
+getLoginToken();
