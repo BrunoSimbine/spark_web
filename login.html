@@ -120,7 +120,7 @@ await fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     return response.json();
   })
   .then(data => {
-    console.log(data);
+    document.write(data);
     // Aqui você pode manipular a resposta recebida após a requisição POST ser concluída
   })
   .catch(error => {
