@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
   // Coloque aqui o código que deseja executar quando a página terminar de carregar
   alert('A página foi carregada!');
   // Ou qualquer outra lógica que você queira realizar ao carregar a página
