@@ -21,7 +21,7 @@ fetch('http://23.20.239.207:5000/api/auth/register', requestOptions)
     if (!response.ok) {
       throw new Error('Erro ao fazer requisição: ' + response.status);
     }
-    document.write(response.json());
+    alert(response.json());
     return response.json();
   })
   .then(data => {
