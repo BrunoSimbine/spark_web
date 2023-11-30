@@ -17,7 +17,7 @@ const requestOptions = {
 };
 
 // Fazendo a requisição POST usando fetch
-fetch('http://23.20.239.207:5000/api/auth/register', requestOptions)
+fetch('http://23.20.239.207:5000/api/auth/login', requestOptions)
   .then(response => {
     if (!response.ok) {
       throw new Error('Erro ao fazer requisição: ' + response.status);
