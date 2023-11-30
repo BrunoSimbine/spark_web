@@ -1,3 +1,5 @@
+function init(){
+
 // Dados a serem enviados no corpo da requisição
 const dataToSend = {
   name: 'string',
@@ -27,4 +29,6 @@ fetch('http://23.20.239.207:5000/api/auth/register', requestOptions)
   })
   .catch(error => {
     console.error('Erro:', error);
-  });
+});
+
+}
