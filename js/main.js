@@ -22,10 +22,10 @@ fetch('http://23.20.239.207:5000/api/auth/login', requestOptions)
     if (!response.ok) {
       throw new Error('Erro ao fazer requisição: ' + response.status);
     }
-    alert(response.json());
     return response.json();
   })
   .then(data => {
+    alert("Ola mundi");
     console.log(data); // Aqui você pode manipular a resposta recebida
   })
   .catch(error => {
