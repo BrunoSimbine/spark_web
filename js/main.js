@@ -1,4 +1,4 @@
-async function getLoginToken(){
+function getLoginToken(){
 // Criar o objeto JSON com os campos 'phone' e 'password'
 const dados = {
   "phone": "string",
@@ -26,5 +26,5 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
   })
   .catch(error => console.error('Erro:', error));
 }
-var tok = await getLoginToken();
+var tok = getLoginToken();
 alert(tok);
