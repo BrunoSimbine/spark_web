@@ -46,7 +46,7 @@
                 </div>
           
                 <div class="col-12">
-                  <button id="submit-btn" class="my-3 btn btn-primary">Entrar</button>
+                  <button id="btn" class="my-3 btn btn-primary">Entrar</button>
                 </div>
                 <div>
                   <p>
@@ -93,7 +93,7 @@
       body { height: calc(100vh - 170px); }
     </style>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('btn').addEventListener('click', function() {
   const dataToSend = {
     phone: 'string',
     password: 'string'
