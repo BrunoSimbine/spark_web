@@ -26,8 +26,8 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     alert(1);
     // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
     // Armazenando dados
-    localStorage.setItem('token', _token);
-    getTokens();
+    //localStorage.setItem('token', _token);
+    //getTokens();
 
   })
   .catch(error => console.error('Erro:', error));
