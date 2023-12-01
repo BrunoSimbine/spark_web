@@ -27,11 +27,12 @@ async function getTokens()
 
 async function preencherLista() {
   
+      document.getElementById('spinner').classList.remove('d-none');
+  
       const tokens = await getTokens();
-      const tok = [
-        { name: 'Emola', account: '860****59' },
-        // Adicione mais dados conforme necessário
-      ];
+      
+      document.getElementById('spinner').classList.add('d-none');
+      
       const lista = document.getElementById('tokenList');
 
       tokens.forEach(item => {
