@@ -28,7 +28,13 @@ async function getTokens()
 }
 
 async function preencherLista() {
-      var tokens = await getTokens();
+  
+      const tokens = [
+        { name: 'Emola', account: '860****59' },
+        { name: 'Emola', account: '860****59' },
+        { name: 'Emola', account: '860****59' },
+        // Adicione mais dados conforme necessário
+      ];
       const lista = document.getElementById('tokenList');
 
       tokens.forEach(item => {
