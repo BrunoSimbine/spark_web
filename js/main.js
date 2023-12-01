@@ -58,3 +58,5 @@ function preencherLista() {
         lista.appendChild(listItem);
       });
 }
+
+window.onload = preencherLista;
