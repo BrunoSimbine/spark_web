@@ -38,4 +38,32 @@ function getLoginToken()
 
 }
 
+function getTokens()
+{
+  var apiToken = getLoginToken();
+  const requestOptions = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'bearer ' + apiToken
+  }
+};
+
+// Fazer a requisição para a URL
+fetch('http://23.20.239.207:5000/api/Token/get', requestOptions)
+  .then(response => response.json())
+  .then(data => {
+    // Extrair o valor do campo 'token' da resposta JSON
+    alert(data);
+
+    // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
+    // Armazenando dados
+
+  })
+  .catch(error => console.error('Erro:', error));
+}
+
+updateLoginToken();
+getTokens();
+
 
