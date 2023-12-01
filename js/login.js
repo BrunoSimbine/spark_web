@@ -41,7 +41,7 @@ async function getLogin()
     }).then(data => {
         alert(4);
         // Armazenando dados
-        localStorage.setItem('token', token.token);
+        localStorage.setItem('token', data.token);
         alert(5);
     })
 }
