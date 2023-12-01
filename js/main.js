@@ -1,5 +1,5 @@
 
-
+const tokens = [];
 
 function getTokens()
 {
@@ -15,11 +15,11 @@ function getTokens()
     if (!response.ok) {
       throw new Error('Erro na requisição');
     }
-    return response.text(); // Extrair a resposta como texto
+    return response.json(); // Extrair a resposta como texto
   })
   .then(data => {
     // Manipular os dados recebidos da resposta
-    console.log('Dados recebidos:', data);
+    tokens = data;
   })
   .catch(error => {
     // Tratamento de erros
@@ -38,7 +38,7 @@ function preencherLista() {
 
       const lista = document.getElementById('tokenList');
 
-      dados.forEach(item => {
+      tokens.forEach(item => {
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item', 'list-group-item-action', 'd-flex', 'justify-content-between', 'align-items-start');
 
