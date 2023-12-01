@@ -1,8 +1,8 @@
 
-function sayHello()
+async function getTokens()
 {
   
-  var tokens = fetch('http://23.20.239.207:5000/api/Transaction/get?tokenId=08dbf020-cdd7-47dd-8df5-5fe7755c96b8', {
+  var tokens = await fetch('http://23.20.239.207:5000/api/Transaction/get?tokenId=08dbf020-cdd7-47dd-8df5-5fe7755c96b8', {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
