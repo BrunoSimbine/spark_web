@@ -27,7 +27,7 @@ async function getTokens()
 
 async function preencherLista() {
   
-      const tokens = getTokens();
+      const tokens = await getTokens();
       const tok = [
         { name: 'Emola', account: '860****59' },
         // Adicione mais dados conforme necessário
