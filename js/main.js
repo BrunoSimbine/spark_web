@@ -10,7 +10,7 @@ async function getTokens()
   method: 'GET',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer ' + AuthToken;
+    'Authorization': 'bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmYwMjAtOTdiYy00NjhhLThhOTktMDVmZTk3NDczY2ZkIiwiZXhwIjoxNzAxNTE0NjQwfQ.FaY9XhUB3MfghI74WU0VojPeBN98X1m9jup4wT4cS6cY06IXs9hwl5aytNonW4PZKFZNPeHXVUJPZs1OWW8NLA' ;
   }
 })
   .then(response => {
