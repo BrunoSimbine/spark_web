@@ -1,4 +1,10 @@
 
+function sayHello()
+{
+  alert("Hello");
+}
+
+
 function preencherLista() {
   
       const tokens = [
