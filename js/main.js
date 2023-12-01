@@ -14,7 +14,7 @@ async function getTokens()
     if (!response.ok) {
       throw new Error('Erro na requisição');
     }
-    return response.text(); // Extrair a resposta como texto
+    return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
