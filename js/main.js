@@ -29,7 +29,7 @@ function preencherLista() {
   
       //const tok = await getTokens();
       const tokens = [
-        { nome: 'Emola', telefone: '860****59' },
+        { name: 'Emola', account: '860****59' },
         // Adicione mais dados conforme necessário
       ];
       const lista = document.getElementById('tokenList');
