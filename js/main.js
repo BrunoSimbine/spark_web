@@ -17,7 +17,7 @@ function getTokens()
     return response.json(); // Extrair a resposta como texto
   })
   .then(data => {
-    alert(tokens[0].name)
+    alert(data[0].name)
     // Manipular os dados recebidos da resposta
     var tokens = data;
     preencherLista(tokens);
