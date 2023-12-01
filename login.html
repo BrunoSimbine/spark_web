@@ -92,37 +92,7 @@
       .h100 { height: calc(100%); }
       body { height: calc(100vh - 170px); }
     </style>
-    <script>
-    
-    // Dados a serem enviados no corpo da requisição (JSON)
-    let dados = {
-      "phone": "string",
-      "password": "string"
-    };
-    
-    var token = await fetch('http://23.20.239.207:5000/api/Auth/login', {
-      method: 'POST',
-      headers: {
-        'accept': '*/*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(dados) // Convertendo o objeto para formato JSON
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Erro na requisição');
-        }
-        return response.json(); // Extrair a resposta como JSON
-      })
-      .catch(error => {
-        // Tratamento de erros
-        console.error('Ocorreu um erro:', error);
-      });
-
-    // Armazenando dados
-    localStorage.setItem('token', token.token);
-
-    </script>
+    <script src="/js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
