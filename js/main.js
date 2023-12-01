@@ -1,13 +1,16 @@
 
 
+
+
 async function getTokens()
 {
-  
+  var AuthToken = await localStorage.getItem('token');
+
   var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmYwMjAtOTdiYy00NjhhLThhOTktMDVmZTk3NDczY2ZkIiwiZXhwIjoxNzAxNTEyNTg5fQ.THmZxKRJ0_EhNX_64UCbShZ4DP7CkSz46i9-uic6fMy_Ee-3cXTwqYRz9kYQnzYbUYHL2iDLdER9PAKe3j1tfA'
+    'Authorization': 'bearer ' + AuthToken;
   }
 })
   .then(response => {
