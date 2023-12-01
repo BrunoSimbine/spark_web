@@ -5,7 +5,7 @@
 async function getTokens()
 {
   var AuthToken = localStorage.getItem('token');
-
+  alert(AuthToken);
   var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
   method: 'GET',
   headers: {
@@ -29,7 +29,7 @@ async function getTokens()
 
 async function preencherLista() {
       
-
+      alert(1);
       var tokens = await getTokens();
       const lista = document.getElementById('tokenList');
 
