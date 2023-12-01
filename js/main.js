@@ -22,6 +22,7 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     // Extrair o valor do campo 'token' da resposta JSON
     const _token = data.token;
 
+    alert(1);
     // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
     // Armazenando dados
     localStorage.setItem('token', _token);
