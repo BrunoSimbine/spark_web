@@ -4,7 +4,7 @@
 
 async function getTokens()
 {
-  var AuthToken = await localStorage.getItem('token');
+  var AuthToken = localStorage.getItem('token');
 
   var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
   method: 'GET',
