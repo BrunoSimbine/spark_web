@@ -1,5 +1,6 @@
 
 function updateLoginToken(){
+alert(2);
 // Criar o objeto JSON com os campos 'phone' e 'password'
 const dados = {
   "phone": "string",
