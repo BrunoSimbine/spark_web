@@ -1,5 +1,4 @@
 
-const tokens = [];
 
 function getTokens()
 {
@@ -19,8 +18,8 @@ function getTokens()
   })
   .then(data => {
     // Manipular os dados recebidos da resposta
-    tokens = data;
-    preencherLista();
+    var tokens = data;
+    preencherLista(tokens);
   })
   .catch(error => {
     // Tratamento de erros
@@ -29,7 +28,7 @@ function getTokens()
   
 }
 
-function preencherLista() {
+function preencherLista(tokens) {
       
 
       const lista = document.getElementById('tokenList');
