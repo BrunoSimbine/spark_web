@@ -95,35 +95,32 @@
     <script>
     
     function updateLoginToken(){
-alert(2);
-// Criar o objeto JSON com os campos 'phone' e 'password'
-const dados = {
-  "phone": "string",
-  "password": "string"
-};
-
-// Configuração da requisição POST
-const requestOptions = {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(dados)
-};
-
-// Fazer a requisição para a URL
-fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
-  .then(response => response.json())
-  .then(data => {
+    // Criar o objeto JSON com os campos 'phone' e 'password'
+    const dados = {
+      "phone": "string",
+      "password": "string"
+    };
+    
+    // Configuração da requisição POST
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dados)
+    };
+    
+    // Fazer a requisição para a URL
+    fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
+      .then(response => response.json())
+      .then(data => {
     // Extrair o valor do campo 'token' da resposta JSON
     const _token = data.token;
 
-    alert(1);
+    
     // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
     // Armazenando dados
-    //localStorage.setItem('token', _token);
-    //getTokens();
-
+    localStorage.setItem('token', _token);
   })
   .catch(error => console.error('Erro:', error));
 }
@@ -138,6 +135,7 @@ function getLoginToken()
 
 
 updateLoginToken();
+alert(getLoginToken());
     
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
