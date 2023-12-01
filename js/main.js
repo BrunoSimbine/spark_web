@@ -1,6 +1,5 @@
-var token = "";
 
-function getLoginToken(){
+function updateLoginToken(){
 // Criar o objeto JSON com os campos 'phone' e 'password'
 const dados = {
   "phone": "string",
@@ -24,10 +23,19 @@ fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
     const _token = data.token;
 
     // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
-    token = _token;
-    alert(token);
+    // Armazenando dados
+    localStorage.setItem('token', _token);
+
   })
   .catch(error => console.error('Erro:', error));
+}
+
+function getLoginToken()
+{
+  // Recuperando dados
+  let token = localStorage.getItem('token');
+  return token;
+
 }
 
 
