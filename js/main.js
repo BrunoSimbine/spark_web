@@ -28,8 +28,6 @@ async function getTokens()
 }
 
 async function preencherLista() {
-      
-      alert(1);
       var tokens = await getTokens();
       const lista = document.getElementById('tokenList');
 
@@ -54,4 +52,4 @@ async function preencherLista() {
       });
 }
 
-window.onload = async preencherLista;
+window.onload = preencherLista;
