@@ -20,6 +20,7 @@ function getTokens()
   .then(data => {
     // Manipular os dados recebidos da resposta
     tokens = data;
+    preencherLista();
   })
   .catch(error => {
     // Tratamento de erros
@@ -29,7 +30,7 @@ function getTokens()
 }
 
 function preencherLista() {
-      getTokens()
+      
 
       const lista = document.getElementById('tokenList');
 
@@ -54,4 +55,4 @@ function preencherLista() {
       });
 }
 
-window.onload = preencherLista;
+window.onload = getTokens;
