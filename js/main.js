@@ -25,7 +25,7 @@ async function getTokens()
 }
 
 
-function preencherLista() {
+async function preencherLista() {
   
       //const tok = await getTokens();
       const tokens = [
