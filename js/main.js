@@ -1,48 +1,33 @@
 
-function updateLoginToken(){
-alert(2);
-// Criar o objeto JSON com os campos 'phone' e 'password'
-const dados = {
-  "phone": "string",
-  "password": "string"
-};
 
-// Configuração da requisição POST
-const requestOptions = {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(dados)
-};
 
-// Fazer a requisição para a URL
-fetch('http://23.20.239.207:5000/api/Auth/login', requestOptions)
-  .then(response => response.json())
-  .then(data => {
-    // Extrair o valor do campo 'token' da resposta JSON
-    const _token = data.token;
-
-    alert(1);
-    // Imprimir o token no HTML (por exemplo, em um elemento com o ID 'token')
-    // Armazenando dados
-    //localStorage.setItem('token', _token);
-    //getTokens();
-
-  })
-  .catch(error => console.error('Erro:', error));
-}
-
-function getLoginToken()
+function getTokens()
 {
-  // Recuperando dados
-  let token = localStorage.getItem('token');
-  return token;
-
+  
+  var tokenList = document.getElementById("");
+  
+  
+  
+  fetch('http://23.20.239.207:5000/api/Token/get', {
+  method: 'GET',
+  headers: {
+    'accept': 'text/plain',
+    'Authorization': 'bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmYwMjAtOTdiYy00NjhhLThhOTktMDVmZTk3NDczY2ZkIiwiZXhwIjoxNzAxNTA0NTAwfQ.stDRkHvgfT007VQkpQjAkYUABi9WYy4vjUXRJfq0VXBig9qp6EORcwLccevLl0KQlenJVjKSYKWvxSJu-htTzw'
+  }
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro na requisição');
+    }
+    return response.text(); // Extrair a resposta como texto
+  })
+  .then(data => {
+    // Manipular os dados recebidos da resposta
+    console.log('Dados recebidos:', data);
+  })
+  .catch(error => {
+    // Tratamento de erros
+    console.error('Ocorreu um erro:', error);
+  });
+  
 }
-
-
-updateLoginToken();
-
-
-
