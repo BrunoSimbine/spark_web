@@ -29,12 +29,7 @@ function getTokens()
 }
 
 function preencherLista() {
-      const dados = [
-        { name: 'Emola', account: '860****59' },
-        { name: 'Mpesa', account: '860****59' },
-        { name: 'BIM', account: '860****59' }
-        // Adicione mais dados conforme necessário
-      ];
+      getTokens()
 
       const lista = document.getElementById('tokenList');
 
