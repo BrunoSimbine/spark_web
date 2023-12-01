@@ -1,9 +1,9 @@
 
 
-function getTokens()
+async function getTokens()
 {
   
-  fetch('http://23.20.239.207:5000/api/Token/get', {
+  var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
@@ -16,22 +16,18 @@ function getTokens()
     }
     return response.json(); // Extrair a resposta como texto
   })
-  .then(data => {
-    alert(data[0].name)
-    // Manipular os dados recebidos da resposta
-    var tokens = data;
-    preencherLista(tokens);
-  })
   .catch(error => {
     // Tratamento de erros
     console.error('Ocorreu um erro:', error);
   });
   
+  return tokens;
 }
 
-function preencherLista(tokens) {
+async function preencherLista() {
       
 
+      var tokens = await getTokens();
       const lista = document.getElementById('tokenList');
 
       tokens.forEach(item => {
@@ -55,4 +51,4 @@ function preencherLista(tokens) {
       });
 }
 
-window.onload = getTokens;
+window.onload = preencherLista;
