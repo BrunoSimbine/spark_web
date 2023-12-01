@@ -27,7 +27,7 @@ function getTokens()
   return tokens;
 }
 
-async function preencherLista() {
+function preencherLista() {
   
       const tokens = [
         { name: 'Emola', account: '860****59' },
