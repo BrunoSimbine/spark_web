@@ -54,4 +54,4 @@ async function preencherLista() {
       });
 }
 
-window.onload = preencherLista;
+window.onload = async preencherLista;
