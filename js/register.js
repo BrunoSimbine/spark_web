@@ -19,11 +19,13 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
 async function createUser()
 {
+    alert(2);
     const nome = document.getElementById('inputName').value;
     const sobrenome = document.getElementById('inputSurname').value;
     const telefone = document.getElementById('inputPhone').value;
     const senha = document.getElementById('inputPassword').value;
     
+    alert(3);
     var result = await fetch('http://23.20.239.207:5000/api/Auth/register', {
         method: 'POST',
         headers: {
@@ -43,6 +45,7 @@ async function createUser()
           }
           return response.text(); // Extrair a resposta como texto
         })
+    alert(4);
     return result;
 }
 
