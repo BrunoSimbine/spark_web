@@ -20,7 +20,7 @@ async function getTokens()
     console.error('Ocorreu um erro:', error);
   });
 
-  
+  return tokens;
 }
 
 
