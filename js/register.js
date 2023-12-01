@@ -4,7 +4,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
-
+        alert(1);
       // Exemplo:
       var user = await createUser();
       window.location.href = 'http://23.20.239.207/login.html';
