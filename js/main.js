@@ -1,5 +1,5 @@
 
-
+/*
 
 
 function getTokens()
@@ -26,6 +26,8 @@ function getTokens()
   
   return tokens;
 }
+
+*/
 
 function preencherLista() {
   
