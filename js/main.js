@@ -2,7 +2,7 @@
 
 
 
-function getTokens()
+async function getTokens()
 {
   
   var response = await fetch('http://23.20.239.207:5000/api/Token/get', {
