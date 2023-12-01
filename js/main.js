@@ -1,12 +1,11 @@
 
-/*
 
 
-function getTokens()
+
+async function getTokens()
 {
-  var AuthToken = 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmYwMjAtOTdiYy00NjhhLThhOTktMDVmZTk3NDczY2ZkIiwiZXhwIjoxNzAxNTE0NjQwfQ.FaY9XhUB3MfghI74WU0VojPeBN98X1m9jup4wT4cS6cY06IXs9hwl5aytNonW4PZKFZNPeHXVUJPZs1OWW8NLA'  //localStorage.getItem('token');
-  alert(AuthToken);
-  fetch('http://23.20.239.207:5000/api/Token/get', {
+  
+  var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
@@ -27,7 +26,6 @@ function getTokens()
   return tokens;
 }
 
-*/
 
 function preencherLista() {
   
