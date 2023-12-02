@@ -42,7 +42,7 @@
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="btn-close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Adicionar</button>
           </div>
         </div>
@@ -102,7 +102,7 @@ botaoAbrirModal.addEventListener('click', function() {
 });
 
 // Selecionar o botão de fechamento do modal (botão "Fechar")
-const botaoFecharModal = document.querySelector('#meuModal .btn-close');
+const botaoFecharModal = document.querySelector('#btn-close');
 
 // Adicionar um evento de clique para fechar o modal quando o botão "Fechar" for clicado
 botaoFecharModal.addEventListener('click', function() {
