@@ -92,6 +92,7 @@
     // Selecionar o botão de abertura do modal
 
 
+const meuModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
 
 const botaoAbrirModal = document.getElementById('btn-modal');
@@ -99,8 +100,6 @@ const botaoAbrirModal = document.getElementById('btn-modal');
 // Adicionar um evento de clique para abrir o modal
 botaoAbrirModal.addEventListener('click', function() {
   // Selecionar o modal pelo ID
-  const meuModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-  
   // Exibir o modal
   meuModal.show();
 });
@@ -113,10 +112,8 @@ const botaoFecharModal = document.getElementById('btn-close');
 
 // Adicionar um evento de clique para fechar o modal quando o botão "Fechar" for clicado
 botaoFecharModal.addEventListener('click', function() {
-  // Selecionar o modal pelo ID
-  const meuModal2 = new bootstrap.Modal(document.getElementById('exampleModal'));
   // Fechar o modal
-  meuModal2.hide();
+  meuModal.hide();
 });
 
     
