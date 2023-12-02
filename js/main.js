@@ -56,31 +56,4 @@ async function preencherLista() {
       });
 }
 
-
-const meuModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-const botaoAbrirModal = document.getElementById('btn-modal');
-
-// Adicionar um evento de clique para abrir o modal
-botaoAbrirModal.addEventListener('click', function() {
-  // Selecionar o modal pelo ID
-  // Exibir o modal
-  meuModal.show();
-});
-
-
-
-
-// Selecionar o botão de fechamento do modal (botão "Fechar")
-const botaoFecharModal = document.getElementById('btn-close');
-
-// Adicionar um evento de clique para fechar o modal quando o botão "Fechar" for clicado
-botaoFecharModal.addEventListener('click', function() {
-  // Fechar o modal
-  meuModal.hide();
-});
-
-
-
-
-
 window.onload = preencherLista;
