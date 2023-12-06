@@ -110,10 +110,10 @@
     const botaoFecharModal = document.getElementById('btn-close');
     
     // Adicionar um evento de clique para fechar o modal quando o botão "Fechar" for clicado
-    botaoFecharModal.addEventListener('click', function() {
+    botaoFecharModal.addEventListener('click', async function() {
       // Fechar o modal
       meuModal.hide();
-      getAlert();
+      await registerToken();
     });
 
     
