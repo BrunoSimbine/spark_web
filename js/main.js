@@ -1,9 +1,8 @@
 
 function registerToken()
 {
-      alert("segundo");
       
-      /*
+      
       
       var name = document.getElementById('inputName').value;
       var account = document.getElementById('inputAccount').value;
@@ -11,6 +10,8 @@ function registerToken()
       
       var authToken = 'bearer ' + localStorage.getItem('token');
       
+      alert("ola");
+      /*
       alert(237);
       const url = 'http://23.20.239.207:5000/api/Token/create';
       const headers = {
