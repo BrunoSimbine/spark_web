@@ -8,6 +8,7 @@ async function registerToken()
       
       var authToken = 'bearer ' + localStorage.getItem('token');
       
+      alert(237);
       const url = 'http://23.20.239.207:5000/api/Token/create';
       const headers = {
         'Accept': 'text/plain',
