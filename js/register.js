@@ -2,10 +2,15 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       // Impedir o comportamento padrão do formulário
       event.preventDefault();
 
+
+        var spinner = document.getElementById('btn-spinner');
+        spinner.style.display = 'inline-block';
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
       // Exemplo:
       var user = await createUser();
+    
+        spinner.style.display = 'none';
       window.location.href = 'http://23.20.239.207/login.html';
       
       // Você pode fazer outras operações desejadas com os dados do formulário
