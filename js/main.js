@@ -11,8 +11,8 @@ function registerToken()
       var authToken = 'bearer ' + localStorage.getItem('token');
       
       alert("ola");
-      /*
-      alert(237);
+      
+      
       const url = 'http://23.20.239.207:5000/api/Token/create';
       const headers = {
         'Accept': 'text/plain',
@@ -43,7 +43,7 @@ function registerToken()
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
-      */
+      
 }
 
 async function getTokens()
