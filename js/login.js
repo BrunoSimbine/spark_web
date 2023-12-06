@@ -8,6 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
       // Exemplo
       await getLogin();
+      spinner.style.display = 'none';
       window.location.href = 'http://23.20.239.207/';
       
       // Você pode fazer outras operações desejadas com os dados do formulário
