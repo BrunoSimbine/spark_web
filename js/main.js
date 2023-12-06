@@ -20,8 +20,24 @@ async function registerToken()
         type: type,
         account: account
       };
-
-
+      
+      var tok = await fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+        return response.text(); // ou response.json() se a resposta for JSON
+      })
+      .then(data => {
+        console.log(data); // Aqui você pode lidar com a resposta da requisição
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
 
 }
 
