@@ -21,22 +21,7 @@ async function registerToken()
         account: account
       };
 
-      
-      fetch(url, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(data)
-      }).then(response => {
-        if (!response.ok) {
-          document.write("Network error");
-          throw new Error('Network response was not ok.');
-        }
-        return response.text(); // ou response.json() se a resposta for JSON
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-    });
+
 
 }
 
