@@ -2,9 +2,9 @@
 async function registerToken()
 {
       alert("segundo");
-      const name = document.getElementById('inputName').value;
-      const account = document.getElementById('inputAccount').value;
-      const type = document.getElementById('inputBank').value;
+      var name = document.getElementById('inputName').value;
+      var account = document.getElementById('inputAccount').value;
+      var type = document.getElementById('inputBank').value;
       /*
       var authToken = 'bearer ' + localStorage.getItem('token');
       
