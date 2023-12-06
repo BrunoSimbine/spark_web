@@ -5,7 +5,7 @@ async function registerToken()
       
       
       var name = document.getElementById('inputName').value;
-      var account = document.getElementById('inputAccount').value + '01';
+      var account = document.getElementById('inputAccount').value;
       var type = document.getElementById('inputBank').value;
       
       var authToken = 'bearer ' + localStorage.getItem('token');
