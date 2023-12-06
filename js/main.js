@@ -22,7 +22,7 @@ async function registerToken()
       };
 
       
-      var result = await fetch(url, {
+      fetch(url, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(data)
