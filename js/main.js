@@ -1,4 +1,3 @@
-/*
 
 async function registerToken()
 {
@@ -42,7 +41,6 @@ async function registerToken()
     });
 
 }
-*/
 
 async function getTokens()
 {
