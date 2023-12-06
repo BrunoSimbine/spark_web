@@ -1,6 +1,9 @@
 function getAlert()
 {
-  alert("Olá nhndo");
+      const name = document.getElementById('name').value;
+      const account = document.getElementById('account').value;
+      const type = document.getElementById('type').value;
+
 }
 async function getTokens()
 {
