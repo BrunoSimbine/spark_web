@@ -1,8 +1,40 @@
-function getAlert()
+async function registerToken()
 {
       const name = document.getElementById('inputName').value;
       const account = document.getElementById('inpuntAccount').value;
       const type = document.getElementById('inputBank').value;
+      
+      var authToken = 'bearer ' + localStorage.getItem('token');
+      
+      const url = 'http://23.20.239.207:5000/api/Token/create';
+      const headers = {
+        'Accept': 'text/plain',
+        'Content-Type': 'application/json',
+        'Authorization': authToken
+      };
+
+      const data = {
+        name: name,
+        type: type,
+        account: account
+      };
+
+      await fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) {
+          document.write("Network error");
+          throw new Error('Network response was not ok.');
+        }
+        return response.text(); // ou response.json() se a resposta for JSON
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    });
 
 }
 async function getTokens()
