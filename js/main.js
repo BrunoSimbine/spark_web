@@ -1,5 +1,5 @@
 
-function registerToken()
+async function registerToken()
 {
       
       
@@ -26,6 +26,8 @@ function registerToken()
         account: account
       };
       
+      alert("funcionando")
+      /*
       await fetch(url, {
         method: 'POST',
         headers: headers,
@@ -43,7 +45,7 @@ function registerToken()
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
-      
+      */
 }
 
 async function getTokens()
