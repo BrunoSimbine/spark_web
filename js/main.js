@@ -3,7 +3,7 @@ async function registerToken()
 {
       alert(1)
       const name = document.getElementById('inputName').value;
-      const account = document.getElementById('inpuntAccount').value;
+      const account = document.getElementById('inputAccount').value;
       const type = document.getElementById('inputBank').value;
       
       var authToken = 'bearer ' + localStorage.getItem('token');
