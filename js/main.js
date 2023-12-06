@@ -1,13 +1,13 @@
 
 async function registerToken()
 {
-      alert(1)
+      
       const name = document.getElementById('inputName').value;
       const account = document.getElementById('inputAccount').value;
       const type = document.getElementById('inputBank').value;
       
       var authToken = 'bearer ' + localStorage.getItem('token');
-      alert(2)
+      
       const url = 'http://23.20.239.207:5000/api/Token/create';
       const headers = {
         'Accept': 'text/plain',
@@ -21,8 +21,7 @@ async function registerToken()
         account: account
       };
 
-      alert(3)
-      await fetch(url, {
+      var result = await fetch(url, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(data)
