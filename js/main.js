@@ -21,7 +21,7 @@ async function registerToken()
         account: account
       };
       
-      var tok = await fetch(url, {
+      await fetch(url, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(data)
@@ -33,7 +33,7 @@ async function registerToken()
         return response.text(); // ou response.json() se a resposta for JSON
       })
       .then(data => {
-        console.log(data); // Aqui você pode lidar com a resposta da requisição
+        alert(data); // Aqui você pode lidar com a resposta da requisição
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
