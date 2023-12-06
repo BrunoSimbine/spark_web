@@ -1,4 +1,7 @@
-
+function getAlert()
+{
+  alert("Olá nhndo");
+}
 async function getTokens()
 {
   var authToken = 'bearer ' + localStorage.getItem('token');
