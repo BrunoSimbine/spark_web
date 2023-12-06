@@ -1,8 +1,8 @@
 function getAlert()
 {
-      const name = document.getElementById('name').value;
-      const account = document.getElementById('account').value;
-      const type = document.getElementById('type').value;
+      const name = document.getElementById('inputName').value;
+      const account = document.getElementById('inpuntAccount').value;
+      const type = document.getElementById('inputBank').value;
 
 }
 async function getTokens()
