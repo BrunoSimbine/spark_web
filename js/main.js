@@ -1,5 +1,5 @@
 
-async function registerToken()
+function registerToken()
 {
       alert("segundo");
       
