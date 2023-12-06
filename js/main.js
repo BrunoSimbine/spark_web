@@ -1,3 +1,5 @@
+/*
+
 async function registerToken()
 {
       alert(1)
@@ -40,6 +42,8 @@ async function registerToken()
     });
 
 }
+*/
+
 async function getTokens()
 {
   var authToken = 'bearer ' + localStorage.getItem('token');
