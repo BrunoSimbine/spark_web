@@ -5,7 +5,7 @@ async function registerToken()
       const name = document.getElementById('inputName').value;
       const account = document.getElementById('inputAccount').value;
       const type = document.getElementById('inputBank').value;
-      
+      /*
       var authToken = 'bearer ' + localStorage.getItem('token');
       
       alert(237);
@@ -39,6 +39,7 @@ async function registerToken()
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
+      */
 
 }
 
