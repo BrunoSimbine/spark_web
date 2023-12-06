@@ -1,7 +1,7 @@
 
 async function registerToken()
 {
-      
+      alert("segundo");
       const name = document.getElementById('inputName').value;
       const account = document.getElementById('inputAccount').value;
       const type = document.getElementById('inputBank').value;
