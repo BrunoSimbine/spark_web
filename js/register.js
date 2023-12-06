@@ -4,7 +4,6 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
-        alert(1);
       // Exemplo:
       var user = await createUser();
       window.location.href = 'http://23.20.239.207/login.html';
@@ -19,13 +18,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
 async function createUser()
 {
-    alert(2);
     const nome = document.getElementById('inputName').value;
     const sobrenome = document.getElementById('inputSurname').value;
     const telefone = document.getElementById('inputPhone').value;
     const senha = document.getElementById('inputPassword').value;
     
-    alert(3);
     var result = await fetch('http://23.20.239.207:5000/api/Auth/register', {
         method: 'POST',
         headers: {
@@ -41,11 +38,11 @@ async function createUser()
       })
         .then(response => {
           if (!response.ok) {
-            throw new Error('Erro na requisição');
+            document.write("Falha");
+            
           }
           return response.text(); // Extrair a resposta como texto
         })
-    alert(4);
     return result;
 }
 
