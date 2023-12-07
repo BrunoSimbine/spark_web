@@ -22,8 +22,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     
       alertPlaceholder.append(wrapper)
     
-
-    
       spinner.style.display = 'none';
       
       
@@ -31,6 +29,21 @@ document.getElementById('transactionForm').addEventListener('submit', async func
 
       // Não se esqueça de adicionar a lógica necessária para processar os dados do formulário
 });
+
+function copyToken()
+{
+    var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      var wrapper = document.createElement('div')
+      alertPlaceholder.innerHTML = ''
+      wrapper.innerHTML = [
+        `<div class="alert alert-success my-2 alert-dismissible" data-bs-dismiss="alert" aria-label="Close" role="alert">`,
+        `   <div>Transação criada com sucesso!</div>`,
+        '   <button type="button" class="btn-close"></button>',
+        '</div>'
+      ].join('')
+    
+      alertPlaceholder.append(wrapper)
+}
 
 
 
