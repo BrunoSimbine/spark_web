@@ -12,25 +12,15 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       
     var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
       var wrapper = document.createElement('div')
+      wrapper.innerHTML = ''
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
         `   <div>${message}</div>`,
         '   <button type="button" class="btn-close"></button>',
         '</div>'
       ].join('')
-    
-     alert(1)
       alertPlaceholder.append(wrapper)
     
-    
-    alert(3)
-    var alertTrigger = document.getElementById('liveAlertBtn')
-    if (alertTrigger) {
-      alertTrigger.addEventListener('click', () => {
-        alert(5)
-        appendAlert('Nice, you triggered this alert message!', 'success')
-      })
-    }
     
     
       spinner.style.display = 'none';
