@@ -12,7 +12,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       
     var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
       var wrapper = document.createElement('div')
-      wrapper.innerHTML = ''
+      alertPlaceholder.innerHTML = ''
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
         `   <div>${message}</div>`,
