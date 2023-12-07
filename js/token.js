@@ -20,17 +20,22 @@ document.getElementById('transactionForm').addEventListener('submit', async func
         '</div>'
       ].join('')
     
+     alert(1)
       alertPlaceholder.append(wrapper)
     }
     
+    alert(2)
     var btnClose = document.getElementById('btn-close')
     btnClose.addEventListener('click', () => {
+        alert(4)
         alertPlaceholder.innerHTML = ''
      })
     
+    alert(3)
     var alertTrigger = document.getElementById('liveAlertBtn')
     if (alertTrigger) {
       alertTrigger.addEventListener('click', () => {
+        alert(5)
         appendAlert('Nice, you triggered this alert message!', 'success')
       })
     }
