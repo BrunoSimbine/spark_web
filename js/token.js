@@ -14,7 +14,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       var wrapper = document.createElement('div')
       alertPlaceholder.innerHTML = ''
       wrapper.innerHTML = [
-        `<div class="alert alert-success my-2 alert-dismissible" data-bs-dismiss="alert" aria-label="Close" role="alert">`,
+        `<div class="alert alert-success my-3 alert-dismissible" data-bs-dismiss="alert" aria-label="Close" role="alert">`,
         `   <div>Transação criada com sucesso!</div>`,
         '   <button type="button" class="btn-close"></button>',
         '</div>'
