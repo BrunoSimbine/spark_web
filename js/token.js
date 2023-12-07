@@ -1,19 +1,48 @@
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
 
-  alertPlaceholder.append(wrapper)
-}
+document.getElementById('transactionForm').addEventListener('submit', async function(event) {
+      // Impedir o comportamento padrão do formulário
+      event.preventDefault();
 
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    appendAlert('Nice, you triggered this alert message!', 'success')
-  })
-}
+
+        var spinner = document.getElementById('btn-spinner');
+        spinner.style.display = 'inline-block';
+      // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
+      // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
+      // Exemplo:
+      
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+      const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+    
+      alertPlaceholder.append(wrapper)
+    }
+    
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+      alertTrigger.addEventListener('click', () => {
+        appendAlert('Nice, you triggered this alert message!', 'success')
+      })
+    }
+    
+    
+      spinner.style.display = 'none';
+      
+      
+      // Você pode fazer outras operações desejadas com os dados do formulário
+
+      // Não se esqueça de adicionar a lógica necessária para processar os dados do formulário
+});
+
+
+
+
+
+
+
+
