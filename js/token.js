@@ -10,20 +10,25 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
       // Exemplo:
       
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-    const appendAlert = (message, type) => {
-      const wrapper = document.createElement('div')
+    var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    var appendAlert = (message, type) => {
+      var wrapper = document.createElement('div')
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
         `   <div>${message}</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '   <button id="btn-close" type="button" class="btn-close"></button>',
         '</div>'
       ].join('')
     
       alertPlaceholder.append(wrapper)
     }
     
-    const alertTrigger = document.getElementById('liveAlertBtn')
+    var btnClose = document.getElementById('btn-close')
+    btnClose.addEventListener('click', () => {
+        alertPlaceholder.innerHTML = ''
+     })
+    
+    var alertTrigger = document.getElementById('liveAlertBtn')
     if (alertTrigger) {
       alertTrigger.addEventListener('click', () => {
         appendAlert('Nice, you triggered this alert message!', 'success')
