@@ -12,6 +12,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       
     var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
       var wrapper = document.createElement('div')
+    alert(1)
       alertPlaceholder.innerHTML = ''
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
@@ -19,9 +20,10 @@ document.getElementById('transactionForm').addEventListener('submit', async func
         '   <button type="button" class="btn-close"></button>',
         '</div>'
       ].join('')
+    alert(2)
       alertPlaceholder.append(wrapper)
     
-    
+    alert(3)
     
       spinner.style.display = 'none';
       
