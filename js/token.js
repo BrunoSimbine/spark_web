@@ -11,7 +11,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       // Exemplo:
       
     var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-    var appendAlert = (message, type) => {
       var wrapper = document.createElement('div')
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
@@ -22,7 +21,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     
      alert(1)
       alertPlaceholder.append(wrapper)
-    }
     
     
     alert(3)
