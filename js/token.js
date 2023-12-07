@@ -16,7 +16,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
         `   <div>${message}</div>`,
-        '   <button id="btn-close" type="button" class="btn-close"></button>',
+        '   <button type="button" class="btn-close"></button>',
         '</div>'
       ].join('')
     
@@ -24,12 +24,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       alertPlaceholder.append(wrapper)
     }
     
-    alert(2)
-    var btnClose = document.getElementById('btn-close')
-    btnClose.addEventListener('click', () => {
-        alert(4)
-        alertPlaceholder.innerHTML = ''
-     })
     
     alert(3)
     var alertTrigger = document.getElementById('liveAlertBtn')
