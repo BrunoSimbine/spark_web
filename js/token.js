@@ -3,6 +3,24 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       // Impedir o comportamento padrão do formulário
       event.preventDefault();
         
+        
+        
+        
+        // Obter a query string da URL
+        var queryString = window.location.search;
+        
+        // Criar um objeto com os parâmetros
+        var params = new URLSearchParams(queryString);
+        
+        // Obter valores específicos usando get()
+        var idToken = params.get('id');
+    
+        alert(idToken);   // Saída: 123
+        
+        
+        
+        
+        
         var authToken = 'bearer ' + localStorage.getItem('token');
 
         var Name = document.getElementById('inputName').value;
