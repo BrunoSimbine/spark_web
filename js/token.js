@@ -14,7 +14,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
       // Exemplo:
-      
+      alert(Name + " " + Amount + " " + Contact)
     
     
     
@@ -44,7 +44,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       })
       .then(data => {
         // Handle the data from the response
-        alert(data);
+        
       })
       .catch(error => {
         // Handle errors here
