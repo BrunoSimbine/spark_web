@@ -111,10 +111,11 @@ async function preencherLista() {
         item.addEventListener('click', function() {
             
       var subheading = item.querySelector('.fw-bold').textContent.trim();
-    
+      const conteudoItem = item.querySelector('.ms-2').textContent.trim();
+      
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
-          alert( subheading);
+          alert( subheading + ' - ' + conteudoItem);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
