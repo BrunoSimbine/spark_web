@@ -11,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       var user = await createUser();
     
         spinner.style.display = 'none';
-      window.location.href = 'http://23.20.239.207/login.html';
+      window.location.href = 'http://3.94.197.194/login.html';
       
       // Você pode fazer outras operações desejadas com os dados do formulário
 
@@ -28,7 +28,7 @@ async function createUser()
     const telefone = document.getElementById('inputPhone').value;
     const senha = document.getElementById('inputPassword').value;
     
-    var result = await fetch('http://23.20.239.207:5000/api/Auth/register', {
+    var result = await fetch('http://3.94.197.194:5000/api/Auth/register', {
         method: 'POST',
         headers: {
           'accept': 'text/plain',
