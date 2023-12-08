@@ -93,8 +93,11 @@ async function preencherLista() {
         const divNome = document.createElement('div');
         divNome.classList.add('fw-bold');
         divNome.textContent = item.name;
+                        
+        const account = document.createElement('span')
+        account.classList.add('item-account');
+        account.textContent = item.account;
 
-        const account = document.createTextNode(item.account);
 
         divConteudo.appendChild(divNome);
         divConteudo.appendChild(account);
@@ -111,7 +114,7 @@ async function preencherLista() {
         item.addEventListener('click', function() {
             
       var subheading = item.querySelector('.fw-bold').textContent.trim();
-      const conteudoItem = item.querySelector('.ms-2').textContent.trim();
+      const conteudoItem = item.querySelector('.item-account').textContent.trim();
       
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
