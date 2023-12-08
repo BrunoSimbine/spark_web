@@ -5,7 +5,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
 
 
         var Name = document.getElementById('inputName').value;
-        var Contact = document.getElementById('inputContact').value;
+        var Contact = document.getElementById('inputPhone').value;
         var Amount = document.getElementById('inputAmount').value;
 
         var spinner = document.getElementById('btn-spinner');
