@@ -109,7 +109,7 @@ async function preencherLista() {
       itensLista.forEach(item => {
         item.addEventListener('click', function() {
             
-            const conteudoItem = item.querySelector('.ms-2').textContent.trim();
+            var conteudoItem = item.querySelector('.ms-2').textContent.trim();
     
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
