@@ -4,6 +4,10 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       event.preventDefault();
 
 
+        var Name = document.getElementById('inputName').value;
+        var Contact = document.getElementById('inputContact').value;
+        var Amount = document.getElementById('inputAmount').value;
+
         var spinner = document.getElementById('btn-spinner');
         spinner.style.display = 'inline-block';
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
@@ -17,10 +21,10 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     const token = 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmY3ZjQtOGE1MC00ODU5LTg2MzAtYjFmYWEwMzEyY2ZlIiwiZXhwIjoxNzAyMTMxMDc4fQ.xdP0editlYtRsYGQrzU1GIwrF2xMCFBBsFVl-1nEybYj4rzkrmpK_nmQpKH5XmZunOt4mqztqSRlNKo9p6432w';
     
     const data = {
-      amount: 7500,
-      contact: 'string',
+      amount: Amount,
+      contact: Contact,
       tokenId: '08dbf7f4-9df0-4ce1-8db7-0b4559f1e9b3',
-      client: 'string'
+      client: Name
     };
     
     await fetch(url, {
