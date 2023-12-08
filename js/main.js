@@ -38,7 +38,8 @@ async function registerToken()
         return response.text(); // ou response.json() se a resposta for JSON
       })
       .then(data => {
-        alert(data); // Aqui você pode lidar com a resposta da requisição
+        
+       // Aqui você pode lidar com a resposta da requisição
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -113,7 +114,7 @@ async function preencherLista() {
     
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
-          alert('Item clicado:', subheading);
+          alert( subheading);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
