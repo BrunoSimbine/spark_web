@@ -1,15 +1,19 @@
 
-// Seleciona todos os itens da lista pela classe CSS
-const itensLista = document.querySelectorAll('.list-group-item');
 
-// Adiciona um evento de clique a cada item da lista
-itensLista.forEach(item => {
-  item.addEventListener('click', function() {
-    // Ação a ser executada quando o item for clicado
-    alert('Item clicado:', item.textContent);
-    // Aqui você pode realizar outras ações conforme necessário
+var listGroup = document.getElementById('tokenList');
+listGroup.addEventListener('click', function() {
+  var itensLista = document.querySelectorAll('.list-group-item');
+
+  // Adiciona um evento de clique a cada item da lista
+  itensLista.forEach(item => {
+    item.addEventListener('click', function() {
+      // Ação a ser executada quando o item for clicado
+      alert('Item clicado:', item.textContent);
+      // Aqui você pode realizar outras ações conforme necessário
+    });
   });
 });
+
 
 
 
