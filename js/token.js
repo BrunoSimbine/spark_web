@@ -24,7 +24,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
         var authToken = 'bearer ' + localStorage.getItem('token');
 
         var Name = document.getElementById('inputName').value;
-        var Contact = document.getElementById('inputPhone').value;
+        var Contact = document.getElementById('inputPhone').value + '';
         var Amount = document.getElementById('inputAmount').value;
 
         var spinner = document.getElementById('btn-spinner');
@@ -51,7 +51,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       headers: {
         'Content-Type': 'application/json',
         'accept': 'text/plain',
-        'Authorization': `bearer ${token}`
+        'Authorization': authToken
       },
       body: JSON.stringify(data)
     }).then(response => {
