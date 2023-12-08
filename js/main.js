@@ -106,7 +106,8 @@ async function preencherLista() {
       
       
       
-      
+      var itensLista = document.querySelectorAll('.list-group-item');
+
       
       
       itensLista.forEach(item => {
