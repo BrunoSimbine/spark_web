@@ -15,7 +15,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
         // Obter valores específicos usando get()
         var idToken = params.get('id');
     
-        alert(idToken);   // Saída: 123
         
         
         
@@ -32,8 +31,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       // Aqui você pode adicionar seu próprio código para manipular os dados do formulário
       // Por exemplo, você pode pegar os valores do formulário e executar alguma ação com eles
       // Exemplo:
-      alert(Name + " " + Amount + " " + Contact)
-    
+      
     
     
     const url = 'http://3.94.197.194:5000/api/Transaction/create';
