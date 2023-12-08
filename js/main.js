@@ -11,7 +11,7 @@ async function registerToken()
       var authToken = 'bearer ' + localStorage.getItem('token');
       
       
-      const url = 'http://23.20.239.207:5000/api/Token/create';
+      const url = 'http://3.94.197.194:5000/api/Token/create';
       const headers = {
         'Accept': 'text/plain',
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ async function getTokens()
 {
   var authToken = 'bearer ' + localStorage.getItem('token');
   
-  var tokens = await fetch('http://23.20.239.207:5000/api/Token/get', {
+  var tokens = await fetch('http://3.94.197.194:5000/api/Token/get', {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
