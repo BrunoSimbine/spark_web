@@ -2,7 +2,8 @@
 document.getElementById('transactionForm').addEventListener('submit', async function(event) {
       // Impedir o comportamento padrão do formulário
       event.preventDefault();
-
+        
+        var authToken = 'bearer ' + localStorage.getItem('token');
 
         var Name = document.getElementById('inputName').value;
         var Contact = document.getElementById('inputPhone').value;
@@ -18,7 +19,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     
     
     const url = 'http://3.94.197.194:5000/api/Transaction/create';
-    const token = 'eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmY3ZjQtOGE1MC00ODU5LTg2MzAtYjFmYWEwMzEyY2ZlIiwiZXhwIjoxNzAyMTMxMDc4fQ.xdP0editlYtRsYGQrzU1GIwrF2xMCFBBsFVl-1nEybYj4rzkrmpK_nmQpKH5XmZunOt4mqztqSRlNKo9p6432w';
+    const token = authToken;
     
     const data = {
       amount: Amount,
