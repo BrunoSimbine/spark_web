@@ -108,8 +108,12 @@ async function preencherLista() {
       // Adiciona um evento de clique a cada item da lista
       itensLista.forEach(item => {
         item.addEventListener('click', function() {
+            
+            const conteudoItem = item.querySelector('.ms-2').textContent.trim();
+    
+    // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
-          alert('Item clicado:', item.textContent);
+          alert('Item clicado:', conteudoItem);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
