@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       // Exemplo
       await getLogin();
       spinner.style.display = 'none';
-      window.location.href = 'http://23.20.239.207/';
+      window.location.href = 'http://3.94.197.194/';
       
       // Você pode fazer outras operações desejadas com os dados do formulário
 
@@ -21,7 +21,7 @@ async function getLogin()
 {
     const telefone = document.getElementById('inputPhone').value;
     const senha = document.getElementById('inputPassword').value;
-    var token = await fetch('http://23.20.239.207:5000/api/Auth/login', {
+    var token = await fetch('http://3.94.197.194:5000/api/Auth/login', {
     method: 'POST',
     headers: {
       'accept': '*/*',
