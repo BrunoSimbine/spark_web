@@ -109,7 +109,7 @@ async function preencherLista() {
       itensLista.forEach(item => {
         item.addEventListener('click', function() {
           // Ação a ser executada quando o item for clicado
-          console.log('Item clicado:', item.textContent);
+          alert('Item clicado:', item.textContent);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
