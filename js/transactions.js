@@ -110,9 +110,9 @@ async function payTransaction(transactionId)
 }).then(response => {
     // Handle the response here
     return response.text();
-  }).then(data => {
+  }).then(data2 => {
     // Handle the response here
-    alert(data + ": Eliminado com sucesso");
+    alert(data2);
   }).catch(error => {
     // Handle errors here
     console.error('Request failed:', error);
