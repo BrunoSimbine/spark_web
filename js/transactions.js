@@ -34,14 +34,15 @@ await fetch(url, options)
     // Handle the data received from the API
 
 
-
+  
   // Function to fill the table with transaction data
   
     const tbody = document.getElementById("transactionsBody");
 
     data.forEach(transaction => {
       const row = document.createElement("tr");
-      
+      var id_transaction = transaction.id;
+      alert(id_transaction);
       // Fill in data for each column
       row.innerHTML = `
         <th scope="row">${transaction.number}</th>
@@ -62,7 +63,7 @@ await fetch(url, options)
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li onclick=payTransaction(${transaction.id})><span class="dropdown-item">Eliminar</span></li>
+              <li onclick=payTransaction(22)><span class="dropdown-item">Eliminar</span></li>
             </ul>
           </div>
 
