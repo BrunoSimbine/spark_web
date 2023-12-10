@@ -82,11 +82,12 @@ await fetch(url, options)
 
 async function payTransaction(transactionId)
 {
+  var authToken = 'bearer ' + localStorage.getItem('token');
   await fetch('http://3.94.197.194:5000/api/Transaction/pay/direct?Id=' + transactionId, {
   method: 'PUT',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmY5YjQtNzA0NS00ZjZhLThiZDctMDRkOTU1NDRkYTM4IiwiZXhwIjoxNzAyMzIzODk0fQ.hBnT00bkkgXuRbqugw_xvmvgldcSA9Rn3-WMiAKcXx-N8KApfW2fzJPCheOeGhn08yBbiQRJWHX08ZdRM5qGYg'
+    'Authorization': authToken
   }
 })
   .then(response => {
