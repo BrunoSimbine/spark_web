@@ -1,4 +1,18 @@
 
+document.getElementById('transactions-btn').addEventListener('click', function(){
+    var queryString = window.location.search;
+        
+        // Criar um objeto com os parâmetros
+        var params = new URLSearchParams(queryString);
+        
+        // Obter valores específicos usando get()
+        var idToken = params.get('id');
+    const url = `transactions.html?id=${idToken}`;
+    window.location.href = url;
+
+});
+
+
 document.getElementById('transactionForm').addEventListener('submit', async function(event) {
       // Impedir o comportamento padrão do formulário
       event.preventDefault();
