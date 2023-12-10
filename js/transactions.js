@@ -19,7 +19,7 @@ const options = {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer ' + authToken
+    'Authorization': authToken
   }
 };
 
