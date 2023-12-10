@@ -2,14 +2,23 @@ async function fillTable() {
 
   // Call the function to fill the table
 
+var queryString = window.location.search;
+        
+// Criar um objeto com os parâmetros
+var params = new URLSearchParams(queryString);
+        
+// Obter valores específicos usando get()
+var idToken = params.get('id');
+        
+const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
 
-const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + ;
+
 
 const options = {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiMDhkYmY5NDctNzIxZC00MGVlLThhYWMtNDA1NzAxZjI2NjE4IiwiZXhwIjoxNzAyMjgyNTcxfQ.pYkljztHRqZ_jRgEikW3FiPZbjmZ9X1VR48h3uvEFmGcEUL_3RREy_QI7Kf4THsbnvy58r5dtv8U35MRERlqog'
+    'Authorization': 'bearer ' + 
   }
 };
 
