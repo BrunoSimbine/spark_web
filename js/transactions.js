@@ -69,10 +69,24 @@ await fetch(url, options)
 
         </td>
       `;
+      tbody.appendChild(row);
+
       
       // Append the row to the table body
-      tbody.appendChild(row);
+      
     });
+    
+      var transactionItems = document.querySelectorAll('.id-transaction');
+      // Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
+      transactionItems.forEach(item => {
+        item.addEventListener('click', function() {
+          alert(124);
+          // Obtém o ID da transação a partir do atributo 'data-transaction-id'
+          //var transactionId = item.getAttribute('data-transaction-id');
+          //payTransaction(transactionId);
+        });
+      });
+      
   })
   .catch(error => {
     // Handle errors during the request
@@ -80,16 +94,7 @@ await fetch(url, options)
   });
 }
 
-var transactionItems = document.querySelectorAll('.id-transaction');
-// Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
-transactionItems.forEach(item => {
-  item.addEventListener('click', function() {
-    alert(124);
-    // Obtém o ID da transação a partir do atributo 'data-transaction-id'
-    //var transactionId = item.getAttribute('data-transaction-id');
-    //payTransaction(transactionId);
-  });
-});
+
 
 
 async function payTransaction(transactionId)
