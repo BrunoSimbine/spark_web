@@ -83,7 +83,6 @@ await fetch(url, options)
           
           // Obtém o ID da transação a partir do atributo 'data-transaction-id'
           var transactionId = item.getAttribute('data-transaction-id');
-          alert(transactionId);
           payTransaction(transactionId);
         });
       });
@@ -102,8 +101,8 @@ async function payTransaction(transactionId)
 {
   
   var authToken = 'bearer ' + localStorage.getItem('token');
-  await fetch('http://3.94.197.194:5000/api/Transaction/pay/direct?Id=' + transactionId, {
-  method: 'PUT',
+  await fetch('http://3.94.197.194:5000/api/Token/Id=' + transactionId, {
+  method: 'DELETE',
   headers: {
     'accept': 'text/plain',
     'Authorization': authToken
