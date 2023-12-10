@@ -55,6 +55,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       body: JSON.stringify(data)
     }).then(response => {
         if (!response.ok) {
+            document.write('falha no servidor: ' + response.status);
           throw new Error('Network response was not ok');
         }
         return response.text(); // Change this based on what response format you expect
@@ -67,6 +68,7 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       })
       .catch(error => {
         // Handle errors here
+        document.write('Erro ' + error);
         console.error('There was a problem with the fetch operation:', error);
       });
 
