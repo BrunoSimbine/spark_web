@@ -44,6 +44,10 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       client: Name
     };
     
+    Name = ' ',
+    Contact = ' ',
+    Amount = ' '
+    
     await fetch(url, {
       method: 'POST',
       headers: {
