@@ -56,9 +56,9 @@ await fetch(url, options)
         <td>
         
           <div class="dropdown">
-            <span data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-three-dots-vertical"></i>
-            </span>
+            </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
