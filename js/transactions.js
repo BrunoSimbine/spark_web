@@ -62,7 +62,7 @@ await fetch(url, options)
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li><a class="dropdown-item" href="#">Eliminar</a></li>
+              <li onclick=payTransaction(${transaction.Id})><a class="dropdown-item" href="#">Eliminar</a></li>
             </ul>
           </div>
 
@@ -89,12 +89,13 @@ async function payTransaction(transactionId)
     'accept': 'text/plain',
     'Authorization': authToken
   }
-})
-  .then(response => {
+}).then(response => {
     // Handle the response here
-    console.log(response);
-  })
-  .catch(error => {
+    return response.text();
+  }).then(data => {
+    // Handle the response here
+    alert(data + ": Eliminado com sucesso");
+  }).catch(error => {
     // Handle errors here
     console.error('Request failed:', error);
   });
