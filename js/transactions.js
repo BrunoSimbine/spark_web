@@ -63,7 +63,7 @@ await fetch(url, options)
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li onclick=payTransaction(${id_transaction})><span class="dropdown-item">Eliminar</span></li>
+              <li class="id-transaction" data-transaction-id="${id_transaction}" ><span class="dropdown-item">Eliminar</span></li>
             </ul>
           </div>
 
@@ -79,6 +79,16 @@ await fetch(url, options)
     console.error('There was a problem with the fetch operation:', error);
   });
 }
+
+var transactionItems = document.querySelectorAll('.id-transaction');
+// Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
+transactionItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Obtém o ID da transação a partir do atributo 'data-transaction-id'
+    var transactionId = item.getAttribute('data-transaction-id');
+    payTransaction(transactionId);
+  });
+});
 
 
 async function payTransaction(transactionId)
