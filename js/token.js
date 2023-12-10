@@ -22,9 +22,9 @@ document.getElementById('transactionForm').addEventListener('submit', async func
         
         var authToken = 'bearer ' + localStorage.getItem('token');
 
-        var Name = document.getElementById('inputName').value;
-        var Contact = document.getElementById('inputPhone').value + '';
-        var Amount = document.getElementById('inputAmount').value;
+        var Name = document.getElementById('inputName');
+        var Contact = document.getElementById('inputPhone');
+        var Amount = document.getElementById('inputAmount');
 
         var spinner = document.getElementById('btn-spinner');
         spinner.style.display = 'inline-block';
@@ -38,16 +38,12 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     const token = authToken;
     
     const data = {
-      amount: Amount,
-      contact: Contact,
+      amount: Amount.value,
+      contact: Contact.value,
       tokenId: idToken,
-      client: Name
+      client: Name.value
     };
     
-    document.getElementById('inputName').value = " ";
-    document.getElementById('inputPhone').value = " ";
-    document.getElementById('inputAmount').value = " ";
-
     
     await fetch(url, {
       method: 'POST',
@@ -65,7 +61,9 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       })
       .then(data => {
         // Handle the data from the response
-        
+        Amount.value = "";
+        Contact.value = "";
+        Name.value = "";
       })
       .catch(error => {
         // Handle errors here
