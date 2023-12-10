@@ -100,8 +100,10 @@ async function preencherLista() {
 
 
         const idField = document.createElement('span')
-        idField.classList.add('id-field d-none');
-        idField.textContent = item.id
+        idField.classList.add('id-field');
+        idField.classList.add('d-none');
+        idField.textContent = item.id;
+        alert(item.id);
 
         divConteudo.appendChild(divNome);
         divConteudo.appendChild(account);
