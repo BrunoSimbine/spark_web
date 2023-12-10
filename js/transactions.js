@@ -11,7 +11,7 @@ var params = new URLSearchParams(queryString);
 var idToken = params.get('id');
         
 var authToken = 'bearer ' + localStorage.getItem('token');
-const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
+var url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
 
 
  
@@ -101,7 +101,7 @@ async function payTransaction(transactionId)
 {
   
   var authToken = 'bearer ' + localStorage.getItem('token');
-  await fetch('http://3.94.197.194:5000/api/Token/Id=' + transactionId, {
+  await fetch('http://3.94.197.194:5000/api/Transaction/delete?Id=' + transactionId, {
   method: 'DELETE',
   headers: {
     'accept': 'text/plain',
