@@ -79,4 +79,10 @@ await fetch(url, options)
   });
 }
 
+
+async function payTransaction(id)
+{
+  
+}
+
 window.onload = fillTable;
