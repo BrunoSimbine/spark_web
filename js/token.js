@@ -56,7 +56,6 @@ document.getElementById('transactionForm').addEventListener('submit', async func
     }).then(response => {
         if (!response.ok) {
             document.write('falha no servidor: ' + response.status);
-          throw new Error('Network response was not ok');
         }
         return response.text(); // Change this based on what response format you expect
       })
