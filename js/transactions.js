@@ -43,7 +43,20 @@ await fetch(url, options)
         <td>${transaction.finished}</td>
         <td>${transaction.contact}</td>
         <td><span class="badge rounded-pill text-bg-primary">${transaction.status}</span></td>
-        <td><button class="btn btn-danger btn-sm">X</button></td>
+        <td>
+        
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              X
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Imprimir</a></li>
+              <li><a class="dropdown-item" href="#">Pagar</a></li>
+              <li><a class="dropdown-item" href="#">Eliminar</a></li>
+            </ul>
+          </div>
+
+        </td>
       `;
       
       // Append the row to the table body
