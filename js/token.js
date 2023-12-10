@@ -44,9 +44,9 @@ document.getElementById('transactionForm').addEventListener('submit', async func
       client: Name
     };
     
-    document.getElementById('inputName').value = '';
-    document.getElementById('inputPhone').value = '';
-    document.getElementById('inputAmount').value = '';
+    document.getElementById('inputName').value = " ";
+    document.getElementById('inputPhone').value = " ";
+    document.getElementById('inputAmount').value = " ";
 
     
     await fetch(url, {
