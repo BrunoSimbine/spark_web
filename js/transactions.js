@@ -62,8 +62,8 @@ await fetch(url, options)
             </span>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
-              <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li class="id-transaction" data-transaction-id="${transaction.id}" ><span class="dropdown-item">Eliminar</span></li>
+              <li class="update-transaction" data-transaction-id="${transaction.id}"><span class="dropdown-item">Pagar</span></li>
+              <li class="delete-transaction" data-transaction-id="${transaction.id}"><span class="dropdown-item">Eliminar</span></li>
             </ul>
           </div>
 
@@ -76,7 +76,7 @@ await fetch(url, options)
       
     });
     
-      var transactionItems = document.querySelectorAll('.id-transaction');
+      var transactionItems = document.querySelectorAll('.delete-transaction');
       // Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
       transactionItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -84,6 +84,17 @@ await fetch(url, options)
           // Obtém o ID da transação a partir do atributo 'data-transaction-id'
           var transactionId = item.getAttribute('data-transaction-id');
           payTransaction(transactionId);
+        });
+      });
+      
+      var transactionItemsUpdate = document.querySelectorAll('.update-transaction');
+      // Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
+      transactionItemsUpdate.forEach(item => {
+        item.addEventListener('click', function() {
+          
+          // Obtém o ID da transação a partir do atributo 'data-transaction-id'
+          var transactionId = item.getAttribute('data-transaction-id');
+          updateTransaction(transactionId);
         });
       });
       
@@ -119,6 +130,32 @@ async function payTransaction(transactionId)
   });
   
 
+}
+
+
+
+
+async function updateTransaction(transactionId)
+{
+  
+  var authToken = 'bearer ' + localStorage.getItem('token');
+  await fetch('http://3.94.197.194:5000/api/Transaction/pay/direct?Id=' + transactionId, {
+  method: 'PUT',
+  headers: {
+    'accept': 'text/plain',
+    'Authorization': authToken
+  }
+}).then(response => {
+    // Handle the response here
+    return response.text();
+  }).then(data2 => {
+    // Handle the response here
+    alert(data2);
+  }).catch(error => {
+    // Handle errors here
+    console.error('Request failed:', error);
+  });
+  
 }
 
 window.onload = fillTable;
