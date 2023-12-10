@@ -27,7 +27,7 @@ await fetch(url, options)
 
   // Function to fill the table with transaction data
   
-    const tbody = document.getElementById("transactionBody");
+    const tbody = document.getElementById("transactionsBody");
 
     data.forEach(transaction => {
       const row = document.createElement("tr");
