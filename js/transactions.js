@@ -14,7 +14,7 @@ var authToken = 'bearer ' + localStorage.getItem('token');
 const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
 
 
-
+ 
 const options = {
   method: 'GET',
   headers: {
