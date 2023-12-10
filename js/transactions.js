@@ -10,6 +10,7 @@ var params = new URLSearchParams(queryString);
 // Obter valores específicos usando get()
 var idToken = params.get('id');
         
+var authToken = 'bearer ' + localStorage.getItem('token');
 const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
 
 
@@ -18,7 +19,7 @@ const options = {
   method: 'GET',
   headers: {
     'accept': 'text/plain',
-    'Authorization': 'bearer ' + 
+    'Authorization': 'bearer ' + authToken
   }
 };
 
