@@ -103,7 +103,6 @@ async function preencherLista() {
         idField.classList.add('id-field');
         idField.classList.add('d-none');
         idField.textContent = item.id;
-        alert(item.id);
 
         divConteudo.appendChild(divNome);
         divConteudo.appendChild(account);
