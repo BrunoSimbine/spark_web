@@ -121,10 +121,11 @@ async function preencherLista() {
         item.addEventListener('click', function() {
             
       var conteudoItem = item.querySelector('.id-field').textContent.trim();
+      const url = `token.html?id=${conteudoItem}`;
+      window.location.href = url;
       
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
-          alert( conteudoItem);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
