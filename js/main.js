@@ -118,12 +118,11 @@ async function preencherLista() {
       itensLista.forEach(item => {
         item.addEventListener('click', function() {
             
-      var subheading = item.querySelector('.fw-bold').textContent.trim();
-      const conteudoItem = item.querySelector('.item-account').textContent.trim();
+      var conteudoItem = item.querySelector('.id-field').textContent.trim();
       
     // Exibe o conteúdo do item clicado no console
           // Ação a ser executada quando o item for clicado
-          alert( subheading + ' - ' + conteudoItem);
+          alert( conteudoItem);
           // Aqui você pode realizar outras ações conforme necessário
         });
       });
