@@ -3,7 +3,7 @@ async function fillTable() {
   // Call the function to fill the table
 
 
-const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=08dbf947-7daa-4bf4-8918-2d4e92d34bae';
+const url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + ;
 
 const options = {
   method: 'GET',
