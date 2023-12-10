@@ -63,7 +63,7 @@ await fetch(url, options)
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li class="id-transaction" data-transaction-id="2" ><span class="dropdown-item">Eliminar</span></li>
+              <li class="id-transaction" data-transaction-id="Funciona" ><span class="dropdown-item">Eliminar</span></li>
             </ul>
           </div>
 
@@ -80,9 +80,10 @@ await fetch(url, options)
       // Itera por cada elemento <li> e adiciona um ouvinte de evento de clique a cada um
       transactionItems.forEach(item => {
         item.addEventListener('click', function() {
-          alert(124);
+          
           // Obtém o ID da transação a partir do atributo 'data-transaction-id'
-          //var transactionId = item.getAttribute('data-transaction-id');
+          var transactionId = item.getAttribute('data-transaction-id');
+          alert(transactionId);
           //payTransaction(transactionId);
         });
       });
