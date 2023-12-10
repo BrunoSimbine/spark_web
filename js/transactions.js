@@ -62,7 +62,7 @@ await fetch(url, options)
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Imprimir</a></li>
               <li><a class="dropdown-item" href="#">Pagar</a></li>
-              <li onclick=payTransaction(${transaction.id})><span class="dropdown-item">Eliminar</span></li>
+              <li onclick=payTransaction(` + transaction.id + `)><span class="dropdown-item">Eliminar</span></li>
             </ul>
           </div>
 
