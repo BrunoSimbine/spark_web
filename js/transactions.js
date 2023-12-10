@@ -84,6 +84,9 @@ async function payTransaction(transactionId)
 {
   
   alert(transactionId);
+  
+  /*
+  
   var authToken = 'bearer ' + localStorage.getItem('token');
   await fetch('http://3.94.197.194:5000/api/Transaction/pay/direct?Id=' + transactionId, {
   method: 'PUT',
@@ -101,7 +104,7 @@ async function payTransaction(transactionId)
     // Handle errors here
     console.error('Request failed:', error);
   });
-  
+  */
 
 }
 
