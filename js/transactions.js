@@ -1,6 +1,4 @@
 async function fillTable() {
-localStorage.setItem('theme', 'dark');
-
 document.getElementById('spinner').classList.remove('d-none');
 
 
@@ -186,7 +184,7 @@ async function updateTransaction(transactionId)
     {
       document.write("Erro: "+ response2.status);
     }
-    return response.text();
+    return response2.text();
   }).then(data2 => {
     // Handle the response here
     alert(data2);
