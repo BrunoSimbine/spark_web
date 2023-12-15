@@ -1,11 +1,6 @@
 async function fillTable() {
 
 document.getElementById('spinner').classList.remove('d-none');
-  
-      
-      
-      
-document.getElementById('spinner').classList.add('d-none');
 
 
 
@@ -40,6 +35,8 @@ await fetch(url, options)
     return response.json(); // Change to .json() if the response is JSON
   })
   .then(data => {
+    
+    document.getElementById('spinner').classList.add('d-none');
     // Handle the data received from the API
    // Supondo que você tenha um array com os nomes das colunas
     var columnNames = ["#", "Name", "Method", "Amount", "Created", "Paid", "Finished", "Contact", "Status", ""];
