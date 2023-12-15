@@ -38,7 +38,9 @@ async function registerToken()
         return response.text(); // ou response.json() se a resposta for JSON
       })
       .then(data => {
-        
+        // Recarregar a página imediatamente
+            location.reload();
+
        // Aqui você pode lidar com a resposta da requisição
       })
       .catch(error => {
