@@ -39,7 +39,6 @@ async function registerToken()
       })
       .then(data => {
         // Recarregar a página imediatamente
-            alert(data);
             window.location.reload();
 
        // Aqui você pode lidar com a resposta da requisição
