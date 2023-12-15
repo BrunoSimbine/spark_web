@@ -76,7 +76,7 @@ await fetch(url, options)
       row.innerHTML = `
         <th scope="row">${transaction.number}</th>
         <td>${transaction.client}</td>
-        <td><span class="badge rounded-pill text-bg-primary">M-Pesa</span></td>
+        <td><span class="badge rounded-pill text-bg-primary">${transaction.provider}</span></td>
         <td>${transaction.amount}</td>
         <td>${transaction.created}</td>
         <td>${transaction.paid}</td>
