@@ -69,11 +69,10 @@ await fetch(url, options)
 
     data.forEach(transaction => {
       const row = document.createElement("tr");
-      var id_transaction = transaction.id;
       
       // Fill in data for each column
       row.innerHTML = `
-        <th scope="row">${transaction.number}</th>
+        <th scope="row">${transaction.id}</th>
         <td>${transaction.client}</td>
         <td><span class="badge rounded-pill text-bg-primary">${transaction.provider}</span></td>
         <td>${transaction.amount}</td>
