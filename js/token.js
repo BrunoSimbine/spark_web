@@ -14,6 +14,31 @@ document.getElementById('transactions-btn').addEventListener('click', function()
 
 document.getElementById('btn-delete').addEventListener('click', async function(){
     
+    var queryString = window.location.search;
+    var params = new URLSearchParams(queryString);
+    var idToken = params.get('id');
+    var authToken = 'bearer ' + localStorage.getItem('token');
+    
+    await fetch('http://3.94.197.194:5000/api/Token/delete?Id=' + idToken, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'text/plain',
+        'Authorization': authToken
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        document.write("Falha: " + response.status);
+      }
+      return response.text();
+    })
+    .then(data => {
+      console.log('Token excluído com sucesso:', data);
+    })
+    .catch(error => {
+      document.write(error);
+    });
+
 
 });
 
