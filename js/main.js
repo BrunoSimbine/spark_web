@@ -33,7 +33,7 @@ async function registerToken()
       })
       .then(response => {
         if (!response.ok) {
-          throw new Error('Network response was not ok.');
+          document.write("Problemas de rede: " + response.status);
         }
         return response.text(); // ou response.json() se a resposta for JSON
       })
@@ -42,7 +42,7 @@ async function registerToken()
        // Aqui você pode lidar com a resposta da requisição
       })
       .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
+        document.write(error);
       });
       
 }
@@ -60,13 +60,13 @@ async function getTokens()
 })
   .then(response => {
     if (!response.ok) {
-      throw new Error('Erro na requisição');
+      document.write("Problemas de rede: " + response.status);
     }
     return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
-    console.error('Ocorreu um erro:', error);
+    document.write(error);
   });
 
   return tokens;
