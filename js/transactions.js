@@ -186,7 +186,7 @@ async function updateTransaction(transactionId)
     return response2.text();
   }).then(data2 => {
     // Handle the response here
-    alert(data2);
+    window.location.reload();
   }).catch(error => {
     // Handle errors here
     document.write(error);
