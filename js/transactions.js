@@ -135,7 +135,7 @@ await fetch(url, options)
 
 
 
-async function payTransaction(transactionId)
+async function deleteTransaction(transactionId)
 {
   
   var authToken = 'bearer ' + localStorage.getItem('token');
@@ -155,7 +155,7 @@ async function payTransaction(transactionId)
     return response.text();
   }).then(data2 => {
     // Handle the response here
-    alert(data2);
+    window.location.reload();
   }).catch(error => {
     // Handle errors here
     document.write(error);
