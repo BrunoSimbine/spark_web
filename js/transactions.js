@@ -1,4 +1,5 @@
 async function fillTable() {
+localStorage.setItem('theme', 'dark');
 
 document.getElementById('spinner').classList.remove('d-none');
 
