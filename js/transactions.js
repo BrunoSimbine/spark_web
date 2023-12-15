@@ -110,7 +110,7 @@ await fetch(url, options)
           
           // Obtém o ID da transação a partir do atributo 'data-transaction-id'
           var transactionId = item.getAttribute('data-transaction-id');
-          payTransaction(transactionId);
+          deleteTransaction(transactionId);
         });
       });
       
