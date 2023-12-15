@@ -150,13 +150,18 @@ async function payTransaction(transactionId)
   }
 }).then(response => {
     // Handle the response here
+
+    if (!response.ok)
+    {
+      document.write("Erro "+ response.status);
+    }
     return response.text();
   }).then(data2 => {
     // Handle the response here
     alert(data2);
   }).catch(error => {
     // Handle errors here
-    console.error('Request failed:', error);
+    document.write(error);
   });
   
 
@@ -175,15 +180,19 @@ async function updateTransaction(transactionId)
     'accept': 'text/plain',
     'Authorization': authToken
   }
-}).then(response => {
+}).then(response2 => {
     // Handle the response here
+    if (!response2.ok)
+    {
+      document.write("Erro: "+ response2.status);
+    }
     return response.text();
   }).then(data2 => {
     // Handle the response here
     alert(data2);
   }).catch(error => {
     // Handle errors here
-    console.error('Request failed:', error);
+    document.write(error);
   });
   
 }
