@@ -33,6 +33,30 @@ await fetch(url, options)
   .then(data => {
     // Handle the data received from the API
 
+   // Supondo que você tenha um array com os nomes das colunas
+    var columnNames = ["#", "Name", "Method", "Amount", "Created", "Paid", "Finished", "Contact", "Status", ""];
+    
+    // Referência à tabela
+    var table = document.querySelector('.table');
+    
+    // Criar o elemento thead
+    var thead = document.createElement('thead');
+    
+    // Criar uma linha na thead
+    var headRow = document.createElement('tr');
+    
+    // Iterar sobre os nomes das colunas e criar os elementos th correspondentes
+    columnNames.forEach(column => {
+        var th = document.createElement('th');
+        th.textContent = column;
+        headRow.appendChild(th);
+    });
+    
+    // Adicionar a linha na thead
+    thead.appendChild(headRow);
+    
+    // Adicionar a thead na tabela
+    table.appendChild(thead);
 
   
   // Function to fill the table with transaction data
