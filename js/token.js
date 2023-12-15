@@ -12,6 +12,13 @@ document.getElementById('transactions-btn').addEventListener('click', function()
 
 });
 
+document.getElementById('btn-delete').addEventListener('click', async function(){
+    
+
+});
+
+
+
 
 document.getElementById('transactionForm').addEventListener('submit', async function(event) {
       // Impedir o comportamento padrão do formulário
