@@ -1,5 +1,14 @@
 async function fillTable() {
 
+document.getElementById('spinner').classList.remove('d-none');
+  
+      
+      
+      
+document.getElementById('spinner').classList.add('d-none');
+
+
+
   // Call the function to fill the table
 
 var queryString = window.location.search;
@@ -32,7 +41,6 @@ await fetch(url, options)
   })
   .then(data => {
     // Handle the data received from the API
-
    // Supondo que você tenha um array com os nomes das colunas
     var columnNames = ["#", "Name", "Method", "Amount", "Created", "Paid", "Finished", "Contact", "Status", ""];
     
