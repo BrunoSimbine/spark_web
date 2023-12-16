@@ -68,7 +68,7 @@ async function getTokens()
   })
   .catch(error => {
     // Tratamento de erros
-    document.write(error);
+    window.location.href = "sparkpaga.com/login.html";
   });
 
   return tokens;
