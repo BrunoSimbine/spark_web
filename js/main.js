@@ -62,13 +62,13 @@ async function getTokens()
 })
   .then(response => {
     if (!response.ok) {
-      document.write("Problemas de rede: " + response.status);
+      window.location.href = "login.html";
     }
     return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
-    window.location.href = "sparkpaga.com/login.html";
+    window.location.href = "login.html";
   });
 
   return tokens;
