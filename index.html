@@ -115,10 +115,16 @@
     
     // Adicionar um evento de clique para fechar o modal quando o botão "Fechar" for clicado
     botaoFecharModal.addEventListener('click', async function() {
+      
       // Fechar o modal
       meuModal.hide();
+      
+      var spinner = document.getElementById('btn-spinner');
+      spinner.style.display = 'inline-block';
+      // Aqui você pode adicionar 
       registerToken();
       
+      spinner.style.display = 'none';
     });
 
     
