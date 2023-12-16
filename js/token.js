@@ -33,7 +33,7 @@ document.getElementById('btn-delete').addEventListener('click', async function()
       return response.text();
     })
     .then(data => {
-      window.location.href = ""
+      window.location.href = "index.html"
     })
     .catch(error => {
       document.write(error);
