@@ -9,7 +9,6 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
       // Exemplo
       await getLogin();
       spinner.style.display = 'none';
-      window.location.href = 'http://3.94.197.194/';
       
       // Você pode fazer outras operações desejadas com os dados do formulário
 
@@ -42,6 +41,7 @@ async function getLogin()
         
         // Armazenando dados
         localStorage.setItem('token', data.token);
+        window.location.href = 'index.html'
         
     })
 }
