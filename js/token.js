@@ -33,7 +33,7 @@ document.getElementById('btn-delete').addEventListener('click', async function()
       return response.text();
     })
     .then(data => {
-      console.log('Token excluído com sucesso:', data);
+      window.location.href = ""
     })
     .catch(error => {
       document.write(error);
