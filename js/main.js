@@ -62,13 +62,13 @@ async function getTokens()
 })
   .then(response => {
     if (!response.ok) {
-      window.location.href = "login.html";
+      document.write("Parte de cima");
     }
     return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
-    window.location.href = "login.html";
+    document.write("Parte de baixo");
   });
 
   return tokens;
