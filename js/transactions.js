@@ -70,6 +70,18 @@ await fetch(url, options)
     data.forEach(transaction => {
       const row = document.createElement("tr");
       
+      var paid = "";
+      var finished = "";
+      
+      if (transaction.paid != "01/01/0001 00:00")
+      {
+        paid = transaction.paid;
+      }
+      
+      if (transaction.finished != "01/01/0001 00:00")
+      {
+        finished = transaction.finished;
+      }
       // Fill in data for each column
       row.innerHTML = `
         <th scope="row">${transaction.id}</th>
@@ -77,8 +89,8 @@ await fetch(url, options)
         <td><span class="badge rounded-pill text-bg-primary">${transaction.provider}</span></td>
         <td>${transaction.amount}</td>
         <td>${transaction.created}</td>
-        <td>${transaction.paid}</td>
-        <td>${transaction.finished}</td>
+        <td>${paid}</td>
+        <td>${finished}</td>
         <td>${transaction.contact}</td>
         <td><span class="badge rounded-pill text-bg-primary">${transaction.status}</span></td>
         <td>
