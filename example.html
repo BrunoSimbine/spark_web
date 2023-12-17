@@ -57,7 +57,15 @@
       </h2>
       <div id="collapseMobile" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong> M-Pesa </strong>
+          
+          <div class="col-12">
+            <label for="inputPhone" class="form-label">Contacto</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">+258</span>
+              <input id="inputPhone" type="tel" class="form-control" maxlength="9" onblur="validarNumero(this)">
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
