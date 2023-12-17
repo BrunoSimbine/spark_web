@@ -2,37 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Checkout Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Checkout com Bootstrap</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container mt-5">
-  <h2>Checkout</h2>
-  <form>
-    <div class="form-group">
-      <label for="cardNumber">Número do Cartão de Crédito:</label>
-      <input type="text" class="form-control" id="cardNumber" placeholder="Insira o número do cartão">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Checkout</h2>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="cardNumber">Número do Cartão</label>
+          <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão" required>
+        </div>
+        <div class="form-group">
+          <label for="expiryDate">Data de Expiração</label>
+          <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+        </div>
+        <div class="form-group">
+          <label for="cardHolder">Nome do Titular do Cartão</label>
+          <input type="text" class="form-control" id="cardHolder" placeholder="Nome do Titular do Cartão" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Pagar</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="mpesa">M-Pesa:</label>
-      <select class="form-control" id="mpesa">
-        <option value="">Selecione uma opção</option>
-        <option value="mpesaOption1">Opção 1</option>
-        <option value="mpesaOption2">Opção 2</option>
-        <!-- Adicione mais opções de M-Pesa conforme necessário -->
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="eMolaContact">eMola (informações de contato):</label>
-      <input type="text" class="form-control" id="eMolaContact" placeholder="Insira as informações de contato">
-    </div>
-    <button type="submit" class="btn btn-primary">Finalizar Pagamento</button>
-  </form>
+  </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
