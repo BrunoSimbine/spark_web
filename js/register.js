@@ -1,3 +1,16 @@
+function validarNumero(input) {
+  // Remover espaços em branco e caracteres não numéricos
+  input.value = input.value.replace(/\D/g, '');
+
+  // Verificar se o número está dentro do intervalo desejado
+  let numero = parseInt(input.value, 10);
+  if (numero <= 820000000 || numero >= 879999999) {
+    alert('Digite um contacto válido!');
+    input.value = ''; // Limpar o campo se estiver fora do intervalo
+  }
+}
+
+
 document.getElementById('loginForm').addEventListener('submit', async function(event) {
       // Impedir o comportamento padrão do formulário
       event.preventDefault();
