@@ -45,23 +45,31 @@
       
       <form id="payment-form">
         <div class="form-group">
-          <label for="cardNumber">Número do Cartão</label>
-          <input type="text" class="form-control" id="cardNumber" placeholder="Número do Cartão" required>
+          <label for="paymentMethod">Método de Pagamento</label>
+          <select class="form-control" id="paymentMethod">
+            <option value="cartao_credito">Cartão de Crédito</option>
+            <option value="mpesa">M-Pesa</option>
+            <!-- Adicione mais métodos de pagamento conforme necessário -->
+          </select>
         </div>
-        <div class="form-group">
-          <label for="expiryDate">Data de Expiração</label>
-          <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+
+        <!-- Campos de pagamento do cartão de crédito -->
+        <div id="cartao_credito" class="payment-method">
+          <!-- Campos para cartão de crédito -->
         </div>
-        <div class="form-group">
-          <label for="cvv">CVV</label>
-          <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+
+        <!-- Campos de pagamento do M-Pesa -->
+        <div id="mpesa" class="payment-method" style="display: none;">
+          <div class="form-group">
+            <label for="mpesaNumber">Número M-Pesa</label>
+            <input type="text" class="form-control" id="mpesaNumber" placeholder="Número M-Pesa">
+          </div>
+          <!-- Outros campos específicos do M-Pesa, se houver -->
         </div>
-        <div class="form-group">
-          <label for="cardHolder">Nome do Titular do Cartão</label>
-          <input type="text" class="form-control" id="cardHolder" placeholder="Nome do Titular do Cartão" required>
-        </div>
+
         <button type="submit" class="btn btn-primary">Pagar</button>
       </form>
+      
     </div>
   </div>
 </div>
