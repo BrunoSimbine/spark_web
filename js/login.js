@@ -16,6 +16,19 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 });
 
 
+function validarNumero(input) {
+  // Remover espaços em branco e caracteres não numéricos
+  input.value = input.value.replace(/\D/g, '');
+
+  // Verificar se o número está dentro do intervalo desejado
+  let numero = parseInt(input.value, 10);
+  if (numero < 820000000 || numero > 879999999) {
+    alert('Digite um número entre 82000000000 e 87999999999');
+    input.value = ''; // Limpar o campo se estiver fora do intervalo
+  }
+}
+
+
 async function getLogin()
 {
     const telefone = document.getElementById('inputPhone').value;
