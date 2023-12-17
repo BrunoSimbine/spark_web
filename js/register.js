@@ -50,7 +50,6 @@ async function createUser()
         body: JSON.stringify({
           "phone": telefone,
           "name": nome,
-          "surname": sobrenome,
           "password": senha
         })
       })
