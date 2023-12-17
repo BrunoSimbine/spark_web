@@ -23,7 +23,7 @@ function validarNumero(input) {
   // Verificar se o número está dentro do intervalo desejado
   let numero = parseInt(input.value, 10);
   if (numero < 820000000 || numero > 879999999) {
-    alert('Digite um número entre 82000000000 e 87999999999');
+    alert('Digite um contacto válido.');
     input.value = ''; // Limpar o campo se estiver fora do intervalo
   }
 }
