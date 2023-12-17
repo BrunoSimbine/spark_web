@@ -9,8 +9,40 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-10 offset-md-3">
+    <div class="col-md-6 offset-md-3">
       <h2>Checkout</h2>
+
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Item 1</h6>
+            <small class="text-muted">Descrição do Item 1</small>
+          </div>
+          <span class="text-muted">$25</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Item 2</h6>
+            <small class="text-muted">Descrição do Item 2</small>
+          </div>
+          <span class="text-muted">$40</span>
+        </li>
+        <!-- Adicione mais itens conforme necessário -->
+
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (USD)</span>
+          <strong>$65</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Desconto</span>
+          <strong>-$5</strong>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total a Pagar (USD)</span>
+          <strong>$60</strong>
+        </li>
+      </ul>
+      
       <form id="payment-form">
         <div class="form-group">
           <label for="cardNumber">Número do Cartão</label>
