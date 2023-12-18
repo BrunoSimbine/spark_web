@@ -20,6 +20,7 @@
     <style>
       * { font-family: 'Jost', sans-serif; }
       .bold { font-weight: 800; }
+      .bold-mini { font-weight: 400; }
     </style>
     
     
@@ -50,7 +51,7 @@
     <div class="container my-2">
       
       <div class="mb-1">
-        <label for="formGroupExampleInput" class="form-label">API Token</label>
+        <label for="formGroupExampleInput" class="form-label bold-mini">API Token</label>
         <div class="input-group mb-2">
           <input type="text" class="form-control readonly disabled" value="ehdvdofnsvskdbsjdkdvsekkdbelddbdjd" aria-label="Recipient's username" aria-describedby="button-addon2" readonly disabled>
           <button class="btn btn-secondary" type="button" id="button-addon2"><i class="bi bi-clipboard2-check"></i> </button>
@@ -72,13 +73,13 @@
           <form id="transactionForm" class="row g-3">
             
             <div class="col-12">
-              <label for="inputName" class="form-label">Nome</label>
+              <label for="inputName" class="form-label bold-mini">Nome</label>
               <input type="text" class="form-control" id="inputName">
             </div>
             
             
             <div class="col-12">
-              <label for="inputPhone" class="form-label">Contacto</label>
+              <label for="inputPhone" class="form-label bold-mini">Contacto</label>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">+258</span>
                 <input id="inputPhone" maxlength="9" type="tel" class="form-control" onblur="validarNumero(this)">
@@ -86,7 +87,7 @@
             </div>
             
             <div class="col-12">
-              <label class="form-label">Montante</label>
+              <label class="form-label bold-mini">Montante</label>
               <input type="number" class="form-control" id="inputAmount">
             </div>
             
