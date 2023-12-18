@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checkout</title>
     
+    <script src="binance-sdk-v1.0.3.min.js"></script>
     <script src="https://www.paypal.com/sdk/js?disable-funding=card&client-id=AU1W48C3WHdIrrXmjlYP1eGIFtzVt93hQR6YvTbnfAjf4jqCd1pwjPKlvo42OyVvnk5SZGrQh2IByya-"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
@@ -132,6 +133,54 @@
     disableFunding: 'card'
     
   }).render("#paypal-button-container");
+  
+  
+  
+  
+  
+  // Importe o arquivo SDK do Binance JS-SDK
+
+// Defina as informações de configuração
+const config = {
+  debug: true, // opcional, habilita o modo de depuração
+  clientId: 'seu id de cliente', // obrigatório, seu id de cliente registrado na Binance Accounts
+  ts: Date.now(), // obrigatório, o timestamp atual em milissegundos
+  nonce: Math.random().toString(36).substr(2), // obrigatório, um valor aleatório
+  signature: 'sua assinatura', // obrigatório, sua assinatura gerada com sua chave secreta e os parâmetros do pagamento
+};
+
+// Verifique a permissão através da API bn.init
+bn.init(config, function (res) {
+  if (res.code === 0) {
+    // Processe a verificação bem-sucedida através da API bn.ready
+    bn.ready(function () {
+      // Crie um link de pagamento com a API bn.createPaymentLink
+      bn.createPaymentLink(
+        {
+          amount: 100, // obrigatório, o valor do pagamento em moeda fiduciária
+          currency: 'USD', // obrigatório, a moeda fiduciária do pagamento
+          description: 'Teste de pagamento', // opcional, a descrição do pagamento
+          callbackUrl: 'https://example.com/callback', // obrigatório, o URL de retorno de chamada para receber a notificação do pagamento
+        },
+        function (res) {
+          if (res.code === 0) {
+            // Exiba o link de pagamento ou o código QR correspondente
+            console.log('Link de pagamento:', res.data.paymentUrl);
+            console.log('Código QR:', res.data.qrCode);
+          } else {
+            // Trate os possíveis erros
+            console.error('Erro ao criar o link de pagamento:', res.msg);
+          }
+        }
+      );
+    });
+  } else {
+    // Trate os possíveis erros
+    console.error('Erro ao verificar a permissão:', res.msg);
+  }
+});
+
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
