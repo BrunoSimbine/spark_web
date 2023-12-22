@@ -25,6 +25,20 @@ document.getElementById('transactions-btn').addEventListener('click', function()
 
 });
 
+document.getElementById('btn-withdraw').addEventListener('click', function(){
+    var queryString = window.location.search;
+        
+        // Criar um objeto com os parâmetros
+        var params = new URLSearchParams(queryString);
+        
+        // Obter valores específicos usando get()
+        var idToken = params.get('id');
+    const url = `withdraw.html?id=${idToken}`;
+    window.location.href = url;
+
+});
+
+
 document.getElementById('btn-delete').addEventListener('click', async function(){
     
     var queryString = window.location.search;
