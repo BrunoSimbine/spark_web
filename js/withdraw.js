@@ -1,4 +1,4 @@
-function initWithdraw()
+async function initWithdraw()
 {
     var queryString = window.location.search;
         
@@ -12,6 +12,7 @@ function initWithdraw()
     
     // Alterando a URL do link
     meuLink.href = 'token.html?id=' + idToken;
+    alert('ola mundo');
     
     }
 
