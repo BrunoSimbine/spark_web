@@ -20,7 +20,7 @@ document.getElementById('transactions-btn').addEventListener('click', function()
         
         // Obter valores específicos usando get()
         var idToken = params.get('id');
-    const url = `transactions.html?id=${idToken}`;
+    var url = `transactions.html?id=${idToken}`;
     window.location.href = url;
 
 });
@@ -33,7 +33,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
         
         // Obter valores específicos usando get()
         var idToken = params.get('id');
-    const url = `withdraw.html?id=${idToken}`;
+    var url = `withdraw.html?id=${idToken}`;
     window.location.href = url;
 
 });
