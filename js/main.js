@@ -62,13 +62,15 @@ async function getTokens()
 })
   .then(response => {
     if (!response.ok) {
-      document.write("Parte de cima");
+      var url = `login.html`;
+      window.location.href = url;
     }
     return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
-    document.write("Parte de baixo");
+    var url = `login.html`;
+    window.location.href = url;
   });
 
   return tokens;
@@ -79,29 +81,29 @@ async function preencherLista() {
   
       document.getElementById('spinner').classList.remove('d-none');
   
-      const tokens = await getTokens();
+      var tokens = await getTokens();
       
       document.getElementById('spinner').classList.add('d-none');
       
-      const lista = document.getElementById('tokenList');
+      var lista = document.getElementById('tokenList');
 
       tokens.forEach(item => {
-        const listItem = document.createElement('li');
+        var listItem = document.createElement('li');
         listItem.classList.add('list-group-item', 'list-group-item-action', 'd-flex', 'justify-content-between', 'align-items-start');
 
-        const divConteudo = document.createElement('div');
+        var divConteudo = document.createElement('div');
         divConteudo.classList.add('ms-2', 'me-auto');
 
-        const divNome = document.createElement('div');
+        var divNome = document.createElement('div');
         divNome.classList.add('fw-bold');
         divNome.textContent = item.name;
                         
-        const account = document.createElement('span')
+        var account = document.createElement('span')
         account.classList.add('item-account');
         account.textContent = item.account;
 
 
-        const idField = document.createElement('span')
+        var idField = document.createElement('span')
         idField.classList.add('id-field');
         idField.classList.add('d-none');
         idField.textContent = item.id;
@@ -115,14 +117,14 @@ async function preencherLista() {
       });
       
       // Seleciona todos os itens da lista pela classe CSS
-      const itensLista = document.querySelectorAll('.list-group-item');
+      var itensLista = document.querySelectorAll('.list-group-item');
       
       // Adiciona um evento de clique a cada item da lista
       itensLista.forEach(item => {
         item.addEventListener('click', function() {
             
       var conteudoItem = item.querySelector('.id-field').textContent.trim();
-      const url = `token.html?id=${conteudoItem}`;
+      var url = `token.html?id=${conteudoItem}`;
       window.location.href = url;
       
     // Exibe o conteúdo do item clicado no console
