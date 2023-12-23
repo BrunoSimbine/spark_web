@@ -1,6 +1,11 @@
 async function fillTable() {
 document.getElementById('spinner').classList.remove('d-none');
 
+// Selecionando o elemento de âncora pelo ID
+let meuLink = document.getElementById('link-token');
+
+// Alterando a URL do link
+
 
 
   // Call the function to fill the table
@@ -12,6 +17,7 @@ var params = new URLSearchParams(queryString);
         
 // Obter valores específicos usando get()
 var idToken = params.get('id');
+meuLink.href = 'token.html?id=' + idToken;
         
 var authToken = 'bearer ' + localStorage.getItem('token');
 var url = 'http://3.94.197.194:5000/api/Transaction/get?tokenId=' + idToken;
