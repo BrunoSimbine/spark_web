@@ -63,14 +63,14 @@ async function getTokens()
   .then(response => {
     if (!response.ok) {
       var url = `login.html`;
-      window.location.href = url;
+      window.location.replace(url);
     }
     return response.json(); // Extrair a resposta como texto
   })
   .catch(error => {
     // Tratamento de erros
     var url = `login.html`;
-    window.location.href = url;
+    window.location.replace(url);
   });
 
   return tokens;
