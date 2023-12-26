@@ -16,7 +16,7 @@ async function initWithdraw()
     
     var authToken = 'bearer ' + localStorage.getItem('token');
     
-    alert(authToken);
+    alert(idToken);
     }
 
 window.onload = initWithdraw;
