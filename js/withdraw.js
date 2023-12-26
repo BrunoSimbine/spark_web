@@ -16,8 +16,6 @@ async function initWithdraw()
     
     var authToken = 'bearer ' + localStorage.getItem('token');
     
-    alert(idToken);
-    
     
     
     document.getElementById('spinner').classList.remove('d-none');
