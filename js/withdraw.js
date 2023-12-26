@@ -91,6 +91,8 @@ async function initWithdraw()
   totalLi.appendChild(strong);
   ul.appendChild(totalLi);
 
+document.body.appendChild(ul);
+
 
 
     }
