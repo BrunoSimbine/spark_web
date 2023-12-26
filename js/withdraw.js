@@ -39,19 +39,16 @@ async function initWithdraw()
 })
 .then(data => {
   alert(data);
-})
-.catch(error => {
-  console.error('Ocorreu um erro:', error);
-});
 
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     
     const transactions = [
   {
@@ -127,6 +124,20 @@ async function initWithdraw()
   ul.appendChild(totalLi);
 
 document.getElementById('list-body').appendChild(ul);
+
+
+
+
+
+
+
+
+
+
+})
+.catch(error => {
+  console.error('Ocorreu um erro:', error);
+});
 
 
 
