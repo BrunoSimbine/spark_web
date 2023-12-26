@@ -38,7 +38,7 @@ async function initWithdraw()
     
     
     
-    
+    /*
     
     var transactions = [
   {
@@ -62,7 +62,7 @@ async function initWithdraw()
 ];
     
     
-    /*
+
   var ul = document.createElement('ul');
   ul.className = "list-group mb-3";
 
