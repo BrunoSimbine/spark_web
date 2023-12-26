@@ -35,10 +35,10 @@ async function initWithdraw()
   if (!response.ok) {
     throw new Error('Erro ao fazer a solicitação');
   }
-  return response.text();
+  return response.json();
 })
 .then(data => {
-  alert(data);
+
 
 
 
@@ -50,33 +50,14 @@ async function initWithdraw()
 
 
     
-    const transactions = [
-  {
-    name: "Bruno Simbine",
-    method: "Paypal",
-    originalAmount: 1200,
-    discountedAmount: 1180
-  },
-  {
-    name: "Arlindo Simbine",
-    method: "IZI Transfer",
-    originalAmount: 800,
-    discountedAmount: 780
-  },
-  {
-    name: "Helena Gaspar",
-    method: "Bitcoin",
-    originalAmount: 500,
-    discountedAmount: 480
-  }
-];
+    const transactions = data.items;
 
 
     
     const ul = document.createElement('ul');
   ul.className = "list-group mb-3";
 
-  let totalAmount = 0;
+  let totalAmount = data.total;
 
   transactions.forEach(transaction => {
     const li = document.createElement('li');
