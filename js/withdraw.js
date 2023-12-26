@@ -20,7 +20,7 @@ async function initWithdraw()
     
     
     
-    
+    document.getElementById('spinner').classList.remove('d-none');
     
     
     await fetch('http://3.94.197.194:5000/api/Token/withdraw?Id=08dc0006-98c0-4d25-80f1-f1d70dd01f15&Bank=Millennium%20BIM', {
@@ -43,7 +43,7 @@ async function initWithdraw()
 
 
 
-
+document.getElementById('spinner').classList.add('d-none');
 
 
 
