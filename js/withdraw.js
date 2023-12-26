@@ -51,6 +51,65 @@ async function initWithdraw()
 
     
     const transactions = data.items;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // Create elements
+const _divCol = document.createElement('div');
+_divCol.classList.add('col-12', 'order-md-last');
+
+const _header = document.createElement('h4');
+_header.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
+
+const _spanText = document.createElement('span');
+_spanText.classList.add('text-primary');
+_spanText.textContent = 'Minhas Transações';
+
+const _spanBadge = document.createElement('span');
+_spanBadge.classList.add('badge', 'bg-primary', 'rounded-pill');
+_spanBadge.textContent = '3';
+
+const _divListBody = document.createElement('div');
+_divListBody.id = 'list-body';
+
+const _divButton = document.createElement('div');
+_divButton.classList.add('d-grid', 'gap-2');
+
+const _button = document.createElement('button');
+_button.classList.add('btn', 'btn-primary');
+_button.setAttribute('type', 'button');
+_button.textContent = 'Concluir';
+
+// Append elements to their respective parents
+_header.appendChild(_spanText);
+_header.appendChild(_spanBadge);
+
+_divCol.appendChild(_header);
+_divCol.appendChild(_divListBody);
+
+_divButton.appendChild(_button);
+_divCol.appendChild(_divButton);
+
+// Append the created structure to an existing HTML element (assuming there's a div with id "container" where you want to place this structure)
+const _container = document.getElementById('container-list');
+_container.appendChild(_divCol);
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
