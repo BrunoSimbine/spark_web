@@ -69,7 +69,7 @@ async function initWithdraw()
     h6.textContent = transaction.name;
     const small = document.createElement('small');
     small.className = "text-body-secondary";
-    small.textContent = transaction.method;
+    small.textContent = transaction.provider;
     div1.appendChild(h6);
     div1.appendChild(small);
 
