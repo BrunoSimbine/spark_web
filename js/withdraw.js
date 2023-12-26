@@ -62,6 +62,7 @@ async function initWithdraw()
 ];
     
     
+    /*
   var ul = document.createElement('ul');
   ul.className = "list-group mb-3";
 
@@ -115,7 +116,7 @@ async function initWithdraw()
   var listBody = document.getElementById('list-body');
   listBody.appendChild(ul);
     
-    
+    */
     
     
     
