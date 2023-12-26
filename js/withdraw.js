@@ -82,7 +82,7 @@ async function initWithdraw()
     const br = document.createElement('br');
     const span2 = document.createElement('span');
     span2.className = "text-success";
-    span2.textContent = `${transaction.discountedAmount} MTn`;
+    span2.textContent = `${transaction.amount} MTn`;
     div2.appendChild(span1);
     div2.appendChild(br);
     div2.appendChild(span2);
@@ -90,8 +90,6 @@ async function initWithdraw()
     li.appendChild(div1);
     li.appendChild(div2);
     ul.appendChild(li);
-
-    totalAmount += transaction.discountedAmount;
   });
 
   const totalLi = document.createElement('li');
