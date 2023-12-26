@@ -91,7 +91,7 @@ async function initWithdraw()
   totalLi.appendChild(strong);
   ul.appendChild(totalLi);
 
-document.body.appendChild(ul);
+document.getElementById('list-body').appendChild(ul);
 
 
 
