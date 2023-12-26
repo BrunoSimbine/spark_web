@@ -16,32 +16,7 @@ async function initWithdraw()
     
     var authToken = 'bearer ' + localStorage.getItem('token');
     
-    
-    
-    await fetch('http://3.94.197.194:5000/api/Token/withdraw?Id='+ idToken + '&Bank=Millennium%20BIM', {
-      method: 'POST',
-      headers: {
-        'accept': 'text/plain',
-        'Authorization': authToken
-      },
-      body: ''
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Erro ao fazer a solicitação');
-      }
-      return response.data();
-    })
-    .then(data => {
-      alert(data);
-    
-    
-    })
-    .catch(error => {
-      console.error('Ocorreu um erro:', error);
-    });
-
-    
+    alert(authToken);
     }
 
 window.onload = initWithdraw;
