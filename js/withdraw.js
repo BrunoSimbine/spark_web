@@ -81,7 +81,15 @@ async function initWithdraw()
     span1.appendChild(del);
     const br = document.createElement('br');
     const span2 = document.createElement('span');
-    span2.className = "text-success";
+    
+    var transactionType = "text-success";
+    
+    if (transaction.amount < 0)
+    {
+        transactionType = "text-danger";
+    }
+    
+    span2.className = transactionType;
     span2.textContent = `${transaction.amount} MTn`;
     div2.appendChild(span1);
     div2.appendChild(br);
