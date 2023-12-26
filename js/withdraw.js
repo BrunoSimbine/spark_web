@@ -18,7 +18,7 @@ async function initWithdraw()
     
     
     
-    fetch('http://3.94.197.194:5000/api/Token/withdraw?Id="+ idToken +"&Bank=Millennium%20BIM', {
+    await fetch('http://3.94.197.194:5000/api/Token/withdraw?Id="+ idToken +"&Bank=Millennium%20BIM', {
       method: 'POST',
       headers: {
         'accept': 'text/plain',
@@ -33,7 +33,7 @@ async function initWithdraw()
       return response.text();
     })
     .then(data => {
-      console.log('Resposta:', data);
+      alert(data);
     })
     .catch(error => {
       console.error('Ocorreu um erro:', error);
