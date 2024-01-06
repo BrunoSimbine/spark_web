@@ -19,7 +19,7 @@ async function initWithdraw()
     
     
     
-    await fetch('http://3.94.197.194:5000/api/Token/withdraw?Id=08dc0006-98c0-4d25-80f1-f1d70dd01f15&Bank=Millennium', {
+    await fetch('http://3.94.197.194:5000/api/Token/withdraw?Id='+ idToken +'&Bank=BIM', {
   method: 'POST',
   headers: {
     'accept': 'text/plain',
